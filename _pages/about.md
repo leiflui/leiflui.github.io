@@ -1,5 +1,4 @@
 ---
-permalink: /
 title: "Welcome to my Research/Personal Website!"
 author_profile: true
 redirect_from: 
