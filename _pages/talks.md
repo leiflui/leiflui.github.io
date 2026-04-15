@@ -12,7 +12,7 @@ author_profile: true
 Title: *EMRI Environmentalism* <br>
 Date: March 2nd-6th, 2026<br>
 Host: Beijing Institute of Mathematical Sciences<br>
-link: (https://aletorreso.wixsite.com/atogw/gwnext2026)[https://aletorreso.wixsite.com/atogw/gwnext2026]<br>
+link: [https://aletorreso.wixsite.com/atogw/gwnext2026](https://aletorreso.wixsite.com/atogw/gwnext2026)<br>
 
 ------
 
