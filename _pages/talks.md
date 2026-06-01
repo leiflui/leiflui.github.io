@@ -8,8 +8,9 @@ author_profile: true
 ## Past Talks:
 ------
 
-### GWNext 2026
-Title: *The 8th International Workshop on the TianQin Science Mission* <br>
+### The 8th International Workshop on the TianQin Science Mission
+Title: *Stretching the Truth: Relativistic Tidal Dissipation and the Gravitational-wave Signal of a White Dwarf Orbiting an Intermediate-Mass Black Hole*
+* <br>
 Date: May 22nd-23th, 2026<br>
 Host: National University of Singapore<br>
 link: [https://tianqin.sysu.edu.cn/en/tq8-program](https://tianqin.sysu.edu.cn/en/tq8-program)<br>
