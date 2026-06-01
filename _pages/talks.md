@@ -9,6 +9,14 @@ author_profile: true
 ------
 
 ### GWNext 2026
+Title: *The 8th International Workshop on the TianQin Science Mission* <br>
+Date: May 22nd-23th, 2026<br>
+Host: National University of Singapore<br>
+link: [https://tianqin.sysu.edu.cn/en/tq8-program](https://tianqin.sysu.edu.cn/en/tq8-program)<br>
+
+------
+
+### GWNext 2026
 Title: *EMRI Environmentalism* <br>
 Date: March 2nd-6th, 2026<br>
 Host: Beijing Institute of Mathematical Sciences<br>
