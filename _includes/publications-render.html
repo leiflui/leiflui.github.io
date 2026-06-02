@@ -1,0 +1,151 @@
+{% comment %}
+  Parse and render publications from BibTeX file with preview images
+{% endcomment %}
+
+<div class="publications-container">
+  {% assign pubs = site.data.publications | sort: 'year' | reverse %}
+  
+  {% comment %} Show selected publications first {% endcomment %}
+  <h2>Featured Publications</h2>
+  <div class="publications-grid">
+    {% for pub in pubs %}
+      {% if pub.selected == true %}
+        {% include publication-card.html pub=pub %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  {% comment %} Show all other publications {% endcomment %}
+  <h2>All Publications</h2>
+  <div class="publications-list">
+    {% for pub in pubs %}
+      {% if pub.selected != true %}
+        {% include publication-card.html pub=pub %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .publications-container {
+    margin: 2em 0;
+  }
+
+  .publications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 2em;
+    margin-bottom: 3em;
+  }
+
+  .publications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .publication-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5em;
+    background: #fafafa;
+    transition: all 0.3s ease;
+  }
+
+  .publication-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .publication-card-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    align-items: start;
+    margin-bottom: 1em;
+  }
+
+  .publication-card-header.no-image {
+    grid-template-columns: 1fr;
+  }
+
+  .publication-preview {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+    max-height: 300px;
+  }
+
+  .publication-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5em;
+    line-height: 1.4;
+  }
+
+  .publication-authors {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 0.5em;
+  }
+
+  .publication-authors .author-highlight {
+    font-weight: 600;
+    color: #2c3e50;
+  }
+
+  .publication-meta {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 0.5em;
+  }
+
+  .publication-journal {
+    font-style: italic;
+    color: #555;
+  }
+
+  .publication-abstract {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.5;
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 1px solid #ddd;
+  }
+
+  .publication-links {
+    display: flex;
+    gap: 0.5em;
+    margin-top: 1em;
+    flex-wrap: wrap;
+  }
+
+  .publication-link {
+    display: inline-block;
+    padding: 0.4em 0.8em;
+    background: #e8e8e8;
+    color: #2c3e50;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.85em;
+    transition: all 0.2s ease;
+  }
+
+  .publication-link:hover {
+    background: #2c3e50;
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    .publications-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .publication-card-header {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,61 @@
+{% comment %}
+  Renders a single publication card with optional preview image
+  Usage: {% include publication-card.html pub=publication %}
+{% endcomment %}
+
+<div class="publication-card">
+  <div class="publication-card-header {% unless include.pub.preview %}no-image{% endunless %}">
+    {% if include.pub.preview %}
+      <img src="{{ '/images/publications/' | prepend: site.baseurl }}{{ include.pub.preview }}" 
+           alt="{{ include.pub.title }}" 
+           class="publication-preview">
+    {% endif %}
+    
+    <div>
+      <h3 class="publication-title">{{ include.pub.title }}</h3>
+      
+      {% if include.pub.authors %}
+        <div class="publication-authors">
+          {% for author in include.pub.authors %}
+            {% if author.isHighlighted %}
+              <span class="author-highlight">{{ author }}</span>
+            {% else %}
+              <span>{{ author }}</span>
+            {% endif %}
+            {% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="publication-meta">
+    {% if include.pub.journal %}
+      <span class="publication-journal">{{ include.pub.journal }}</span>
+    {% endif %}
+    {% if include.pub.volume %}
+      <span> {{ include.pub.volume }}{% if include.pub.issue %}({{ include.pub.issue }}){% endif %}</span>
+    {% endif %}
+    {% if include.pub.pages %}
+      <span>, pp. {{ include.pub.pages }}</span>
+    {% endif %}
+    {% if include.pub.year %}
+      <span> ({{ include.pub.year }})</span>
+    {% endif %}
+  </div>
+
+  {% if include.pub.abstract %}
+    <div class="publication-abstract">
+      {{ include.pub.abstract }}
+    </div>
+  {% endif %}
+
+  <div class="publication-links">
+    {% if include.pub.url %}
+      <a href="{{ include.pub.url }}" class="publication-link" target="_blank" rel="noopener">View Paper</a>
+    {% endif %}
+    {% if include.pub.doi %}
+      <a href="https://doi.org/{{ include.pub.doi }}" class="publication-link" target="_blank" rel="noopener">DOI</a>
+    {% endif %}
+  </div>
+</div>
