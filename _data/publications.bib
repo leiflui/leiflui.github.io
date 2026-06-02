@@ -1,27 +1,59 @@
-@article{lui2025_qpe,
-  title = {Gravitational Wave Signatures of Quasi-Periodic Eruptions: {LISA} Detection Prospects for {RX J1301.9+2747}},
-  author = {Lui, L. and Torres-Orjuela, A. and Kar Chowdhury, R. and Dai, L.},
-  year = {2025},
-  journal = {The Astrophysical Journal},
-  volume = {XXX},
-  pages = {XXX},
-  doi = {10.48550/arXiv.2501.xxxxx},
-  url = {https://arxiv.org/abs/2501.xxxxx},
-  preview = {qpe-lisa.png},
-  selected = {true},
-  abstract = {Quasi-periodic eruptions from supermassive black holes provide unique opportunities for testing gravitational wave signatures with future space-based detectors like LISA. We investigate the detectability of gravitational waves from the quasi-periodic eruptions observed in RX J1301.9+2747.}
-}
+---
+# Publications data in YAML format for Jekyll parsing
+# Each publication entry supports:
+# - title: Publication title
+# - authors: Array of author objects with 'name' and 'isHighlighted' boolean
+# - year: Publication year
+# - month: Publication month (optional)
+# - journal: Journal or publication venue
+# - volume, issue, pages: Bibliographic details
+# - doi, url: Links to the paper
+# - preview: Image filename from /images/publications/
+# - selected: Boolean to feature on main page
+# - abstract: Publication abstract
 
-@article{yang2026_wd_imbh,
-  title = {Relativistic Tidal Dissipation and the Gravitational-Wave Signal of a White Dwarf Orbiting an Intermediate-Mass Black Hole},
-  author = {Yang, Y. and Lui, L. and Torres-Orjuela, A. and Chen, X.},
-  year = {2026},
-  journal = {The Astrophysical Journal},
-  volume = {XXX},
-  pages = {XXX},
-  doi = {10.48550/arXiv.2601.xxxxx},
-  url = {https://arxiv.org/abs/2601.xxxxx},
-  preview = {wd-imbh.png},
-  selected = {false},
-  abstract = {Analysis of tidal dissipation effects in white dwarf-intermediate mass black hole systems and their gravitational wave signatures. We model the relativistic effects and compute the expected gravitational wave strain for LISA.}
-}
+- id: lui2025_qpe
+  title: "Gravitational Wave Signatures of Quasi-Periodic Eruptions: LISA Detection Prospects for RX J1301.9+2747"
+  authors:
+    - name: "L. Lui"
+      isHighlighted: true
+    - name: "A. Torres-Orjuela"
+      isHighlighted: false
+    - name: "R. Kar Chowdhury"
+      isHighlighted: false
+    - name: "L. Dai"
+      isHighlighted: false
+  year: 2025
+  month: 1
+  journal: "The Astrophysical Journal"
+  volume: "XXX"
+  issue: "XXX"
+  pages: "XXX"
+  doi: "10.48550/arXiv.2501.xxxxx"
+  url: "https://arxiv.org/abs/2501.xxxxx"
+  preview: "qpe-lisa.png"
+  selected: true
+  abstract: "Quasi-periodic eruptions (QPEs) from supermassive black holes represent a new window for testing the properties of accretion physics and black hole spacetime geometry. We investigate the detectability of gravitational waves produced during quasi-periodic eruptions in the source RX J1301.9+2747 with the Laser Interferometer Space Antenna (LISA). We model the dynamics of the accretion disk and compute the expected gravitational wave strain from the orbital evolution of the orbiting bodies during QPE cycles. Our results show that LISA should be capable of detecting gravitational wave signals from nearby QPE sources, opening new possibilities for multi-messenger observations of AGN."
+
+- id: yang2026_wd_imbh
+  title: "Relativistic Tidal Dissipation and the Gravitational-Wave Signal of a White Dwarf Orbiting an Intermediate-Mass Black Hole"
+  authors:
+    - name: "Y. Yang"
+      isHighlighted: false
+    - name: "L. Lui"
+      isHighlighted: true
+    - name: "A. Torres-Orjuela"
+      isHighlighted: false
+    - name: "X. Chen"
+      isHighlighted: false
+  year: 2026
+  month: 3
+  journal: "The Astrophysical Journal"
+  volume: "XXX"
+  issue: "XXX"
+  pages: "XXX"
+  doi: "10.48550/arXiv.2601.xxxxx"
+  url: "https://arxiv.org/abs/2601.xxxxx"
+  preview: "wd-imbh.png"
+  selected: false
+  abstract: "White dwarfs orbiting intermediate-mass black holes (IMBHs) represent a new class of compact binary systems accessible to space-based gravitational wave detectors. We analyze the relativistic effects of tidal dissipation in such systems and compute the expected gravitational wave signatures for LISA and other future detectors. We model the tidal deformation of the white dwarf and derive the rate of energy dissipation as a function of orbital parameters. Our calculations show that these systems can produce detectable gravitational wave signals over observation timescales, providing constraints on IMBH demographics."
