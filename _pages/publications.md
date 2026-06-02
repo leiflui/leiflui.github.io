@@ -2,10 +2,29 @@
 title: "Publications"
 permalink: /publications/
 author_profile: true
+layout: publications-list
 ---
 
-### Lead/Co-Lead Authored:
-- **L. Lui**, A. Torres-Orjuela, R. Kar Chowdhury, &  L. Dai. (2025). *Gravitational Wave Signatures of Quasi-Periodic Eruptions: LISA Detection Prospects for RX J1301.9+2747.* [https://doi.org/10.48550/arXiv.2508.07961](https://arxiv.org/abs/2508.07961) (Accepted in The Astrophysical Journal).
+This page displays my publications with optional preview figures. Publications with a preview image will show a representative figure alongside the publication details.
 
-### Co-Authored:
-- Y. Yang, **L. Lui**, A. Torres-Orjuela, X. Chen (2026). *Relativistic Tidal Dissipation and the Gravitational-Wave Signal of a White Dwarf Orbiting an Intermediate-Mass Black Hole* [https://doi.org/10.48550/arXiv.2602.22688](https://arxiv.org/abs/2602.22688) (Under Review in Physical Review D).
+## Citation Format
+
+Each publication entry supports the following fields for rich presentation:
+
+- **preview**: Path to a representative figure (e.g., `qpe-lisa.png`)
+- **selected**: Boolean to highlight featured publications
+- **abstract**: Publication abstract
+- **url**: Publication DOI or arXiv link
+- **year**, **journal**, **volume**, **pages**: Standard bibliographic info
+
+## Adding Preview Images
+
+To add a preview image to your publication:
+
+1. Save your image to `images/publications/` directory (e.g., `qpe-lisa.png`)
+2. Add a `preview: qpe-lisa.png` field to the publication's BibTeX entry in `_data/publications.bib`
+3. Optionally set `selected: true` to highlight the publication on the main publications page
+
+## Publication Data
+
+All publications are managed through `_data/publications.bib` in BibTeX format, making it easy to import from your reference manager (Zotero, Mendeley, etc.).
