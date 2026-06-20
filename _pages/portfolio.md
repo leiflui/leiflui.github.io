@@ -4,7 +4,7 @@ title: "Research"
 permalink: /portfolio/
 author_profile: true
 ---
-
+I like solving puzzles, so physics is a place to harness my creative energy. I enjoy learning new mathematical techniques and applying to real-life systems. Currently, my main research area is black-hole (BH) physics, but from time to time, I do enjoy learning some other interesting things like fluid dynamics, electrodynamics, and complex systems, and try to integrate them with my research on BHs.
 ## Extreme-Mass-Ratio Inspirals (EMRIs)
 ------
 ![Looping Demo](images/kerr_geodesics_rotating_trails_4_3.gif)
