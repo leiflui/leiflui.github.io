@@ -8,7 +8,7 @@ author_profile: true
 ## Extreme-Mass-Ratio Inspirals (EMRIs)
 ------
 <div align="center">
-  <img src="images/kerr_geodesics_rotating_trails_4_3.mp4" alt="Looping Demo" />
+  <img src="images/kerr_geodesics_rotating_trails_4_3.gif" alt="Looping Demo" />
 </div>
 **FIG 1:** *EMRI with a mass ratio* \\(q=3\times 10^{-5}\\) *, where red and blue trails are the trajectories for spinning and non-spinning secondary in Kerr spacetime. The orbital parameters are* \\((a, p, e, x)=(0.95M,8M, 0.65, \cos(\pi/4))\\). *The trajectory of the spinning secondary is governed by the Matthison-Papapetrou-Dixon (MPD) equations, and has dimensionless spin* \\(\chi=0.95\\).
 
