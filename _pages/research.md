@@ -13,7 +13,7 @@ I like solving puzzles, so physics is the natural place to harness my creative e
 ## Extreme-Mass-Ratio Inspirals (EMRIs)
 ------
 <center>
-  <img src="images/kerr_geodesics_rotating_trails_4_3.gif" alt="Looping Demo" width="100%">
+  <img src="images/kerr_geodesics_rotating_trails_4_3.gif" alt="Looping Demo" width="80%">
 </center>
 
 
