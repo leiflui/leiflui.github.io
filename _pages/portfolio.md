@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "Research"
-permalink: /portfolio/
+permalink: /research/
 author_profile: true
 ---
 I like solving puzzles, so physics is a place to harness my creative energy. I enjoy learning new mathematical techniques and applying to real-life systems. Currently, my main research area is black-hole (BH) physics, but from time to time, I do enjoy learning some other interesting areas in physics like fluid dynamics, electrodynamics, complex systems, etc. The most exciting part is when I get to integrate ideas that I learn from other disciplines with my research on BHs. Below, I provide an overview of my current projects, and some thoughts that keep me up at night...
