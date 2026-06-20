@@ -16,3 +16,5 @@ Extreme-mass-ratio inspirals (EMRIs) are binary systems with mass ratio \\(q\gtr
 ## GW Signals from EMRIs
 ------
 As seen in FIG. 1, EMRIs have complex orbits, but what makes them so remarkable is their GW signals.
+
+## Environmental Effects (EEs) on EMRI GWs
