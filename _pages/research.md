@@ -33,6 +33,7 @@ As mentioned previously, the long orbital timescales allow for small perturbatio
 
 ## Probing Strong Gravity with EMRIs
 
+## Other Thoughts and Ideas
 
 
 
