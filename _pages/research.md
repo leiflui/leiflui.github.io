@@ -23,7 +23,7 @@ Extreme-mass-ratio inspirals (EMRIs) are binary systems with mass ratio \\(q\les
 As seen in FIG. 2, EMRIs have complex orbits, but what makes them so remarkable is their gravitational-wave (GW) signals. EMRI orbits have 2 phases, the first of which is the adiabatic inspiral phase, where the secondary is on a stable orbit and slowly inspirals towards a MBH due to GW radiation. The second phase is when the orbit loses a sufficient amount of energy and angular momentum such that the orbit is no longer stable and plunges towards the MBH. 
 
 ![LoopingDemo](images/plunge_waveform.gif)
-*FIG. 3: EMRI plunge with mass ratio* \\(q=4\times 10^{-7}\\). *The trajectory is animated alongside its GW signal, and we offset the plunge time to be at* \\(t=0\\). *The initial constants of motion are* \\((a, \mathscr{E}, \mathscr{L}, \mathscr{Q})= (0.8,0.95,2.6, 0.5)\\), *and the trajectory and waveform are evolved using my own time-domain Teukolsky solver.*
+*FIG. 3: EMRI plunge with mass ratio* \\(q=4\times 10^{-7}\\). *The trajectory is animated alongside its GW signal, where the plunge time to be at \\(t=0\\), and the initial constants of motion are* \\((a, \mathscr{E}, \mathscr{L}, \mathscr{Q})= (0.8,0.95,2.6, 0.5)\\). *The trajectory and waveform are evolved using [kerrgeopy](https://github.com/BlackHolePerturbationToolkit/KerrGeoP) and my own time-domain Teukolsky solver.*
 
 ## Environmental Effects (EEs) on EMRI GWs
 
