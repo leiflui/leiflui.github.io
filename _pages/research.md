@@ -22,6 +22,8 @@ Extreme-mass-ratio inspirals (EMRIs) are binary systems with mass ratio \\(q\les
 ------
 As seen in FIG. 2, EMRIs have complex orbits, but what makes them so remarkable is their gravitational-wave (GW) signals. 
 ![LoopingDemo](images/plunge_waveform.gif)
+*FIG. 3: EMRI plunge with mass ratio* \\(q=4\times 10^{-7}\\). *The trajectory is animated alongside its GW signal, and we offset the plunge time to be at* \\(t=0\\). The initial constants of motion are* \\((a, \mathscr{E}, \mathscr{L}, \mathscr{Q})= (0.8,0.95,2.6, 0.5\\), and the trajectory and waveform is evolved using my own time-domain Teukolsky solver.
+
 These systems are the primary targets for space-based millihertz gravitational-wave (GW) detectors such as LISA, TianQin, and Taiji.
 
 ## Environmental Effects (EEs) on EMRI GWs
