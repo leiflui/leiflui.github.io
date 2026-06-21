@@ -20,6 +20,8 @@ Extreme-mass-ratio inspirals (EMRIs) are binary systems with mass ratio \\(q\les
 
 ## Gravitational Wave (GWs) from EMRIs
 ------
-As seen in FIG. 2, EMRIs have complex orbits, but what makes them so remarkable is their gravitational-wave (GW) signals. These systems are the primary targets for space-based millihertz gravitational-wave (GW) detectors such as LISA, TianQin, and Taiji.
+As seen in FIG. 2, EMRIs have complex orbits, but what makes them so remarkable is their gravitational-wave (GW) signals. 
+![LoopingDemo](images/plunge_waveform.gif)
+These systems are the primary targets for space-based millihertz gravitational-wave (GW) detectors such as LISA, TianQin, and Taiji.
 
 ## Environmental Effects (EEs) on EMRI GWs
