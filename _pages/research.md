@@ -20,15 +20,16 @@ Extreme-mass-ratio inspirals (EMRIs) are binary systems with mass ratio \\(q\les
 
 ## Gravitational Wave (GWs) from EMRIs
 ------
-EMRIs are one of the primary targets for space-based millihertz gravitational-wave (GW) detectors such as LISA, TianQin, and Taiji. As seen in FIG. 2, EMRIs have complex orbits, but what makes them so remarkable is their gravitational-wave (GW) signals, as this would allow us to test physics near a MBH. EMRI orbits have 2 phases: The first of which is the adiabatic inspiral phase, where the secondary is on a stable orbit and slowly inspirals towards a MBH due to GW radiation. 
+EMRIs are one of the primary targets for space-based millihertz gravitational-wave (GW) detectors such as LISA, TianQin, and Taiji. As seen in FIG. 2, EMRIs have complex orbits, but what makes them so remarkable is their gravitational-wave (GW) signals, as this would allow us to test physics near a MBH. EMRI orbits have 2 phases: the inspiral and the plunge. The adiabatic inspiral phase, where the secondary is on a stable orbit and slowly inspirals towards a MBH due to GW radiation.
 
 ![LoopingDemo](images/emri_orbit_and_waveform.gif)
 *FIG. 3: EMRI on stable orbit and its GW signal. The orbital parameters are* \\((a, p, e, x)=(0.95M,8M, 0.65, \cos(\pi/4))\\). *The trajectory and waveform are evolved using [kerrgeopy](https://github.com/BlackHolePerturbationToolkit/KerrGeoPy) and [pybhpt](https://github.com/znasipak/pybhpt).*
 
-The second phase is when the orbit loses a sufficient amount of energy and angular momentum such that the orbit is no longer stable and plunges towards the MBH. 
+As seen in FIG. 3, for EMRIs on eccentric orbits, the GW signal peaks when the secondary is at periapsis, and the converse occurs at apoapsis. This creates a distinctive "beating" pattern, and given the long orbital timescales, we expect EMRIs' signals to be distinct from other sources. Based on loss-cone theory, we expect ~10-100 EMRIs to be detected over the observation time of space-based detectors. After many orbital cycles, the EMRI dissipates enough energy and enter the late inspiral phase, and here the complex general-relativistic (GR) effects dominate. When the orbit loses a sufficient amount of energy and angular momentum such that the orbit is no longer stable and plunges towards the MBH. This allows us to test GR in the strong-field regime and use EMRIs to probe the structure of spacetime near MBHs. 
 
 ![LoopingDemo](images/plunge_waveform.gif)
 *FIG. 4: EMRI trajectory plunge with mass ratio* \\(q=4\times 10^{-7}\\) *and its GW signal. The plunge time to be at \\(t=0\\), and the initial constants of motion are* \\((a, \mathscr{E}, \mathscr{L}, \mathscr{Q})= (0.8,0.95,2.6, 0.5)\\). *The trajectory and waveform are evolved using [kerrgeopy](https://github.com/BlackHolePerturbationToolkit/KerrGeoPy) and my own time-domain Teukolsky solver [TeukolPy](https://github.com/leiflui/TeukolPy).*
+
 
 ## Environmental Effects (EEs) on EMRI GWs
 As mentioned previously, the long orbital timescales allow for small perturbations to manifest as considerable changes in the orbital evolution. These changes modify the GW signals, which can be picked up by our space-based detectors and to be subsequently analyzed. Apart from GW radiation and gravitational SFs, there can be perturbative changes due to astrophysical environmental effects (EEs) such as aerodynamical forces and resonant effects from gases in accretion disks, changes in the spacetime due to dense dark matter halos, tidal effects from other orbiting bodies in globular clusters, etc. Part of my research is to understand how these EEs are imprinted on the GW signals. 
