@@ -21,6 +21,7 @@ Extreme-mass-ratio inspirals (EMRIs) are binary systems with mass ratio \\(q\les
 ## Gravitational Wave (GWs) from EMRIs
 ------
 EMRIs are one of the primary targets for space-based millihertz gravitational-wave (GW) detectors such as LISA, TianQin, and Taiji. As seen in FIG. 2, EMRIs have complex orbits, but what makes them so remarkable is their gravitational-wave (GW) signals, as this would allow us to test physics near a MBH. EMRI orbits have 2 phases: The first of which is the adiabatic inspiral phase, where the secondary is on a stable orbit and slowly inspirals towards a MBH due to GW radiation. 
+
 ![LoopingDemo](images/emri_orbit_and_waveform.gif)
 *FIG. 3: EMRI on stable orbit and its GW signal. The orbital parameters are* \\((a, p, e, x)=(0.95M,8M, 0.65, \cos(\pi/4))\\). *The trajectory and waveform are evolved using [kerrgeopy](https://github.com/BlackHolePerturbationToolkit/KerrGeoPy) and [pybhpt](https://github.com/znasipak/pybhpt).*
 
