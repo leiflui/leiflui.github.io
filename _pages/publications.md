@@ -3,7 +3,7 @@ title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
-## Journal Articles:
+## Peer-Reviewed Journal Articles:
 
 ### Lead/Co-Lead Authored:
 - **L. Lui**, L. V. Drummond, A. Torres-Orjuela. (2026). *Pitching Cosmic Curveballs: Environmental Effects on Extreme-Mass-Ratio Inspirals with Spinning Secondaries.* [DOI:10.1103/dy3h-65ty](https://doi.org/10.1103/dy3h-65ty).
