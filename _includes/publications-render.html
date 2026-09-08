@@ -139,6 +139,13 @@
     color: white;
   }
 
+  /* Keep DOI links on one line to avoid awkward breaks */
+  .page__content a[href*="doi.org"],
+  .publications-container a[href*="doi.org"] {
+    white-space: nowrap;
+    word-break: normal;
+  }
+
   @media (max-width: 768px) {
     .publications-grid {
       grid-template-columns: 1fr;
