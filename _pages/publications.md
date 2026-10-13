@@ -14,7 +14,8 @@ author_profile: true
   const journalCounts = [
     { journal: 'Phys. Rev. Lett.', count: 1 },
     { journal: 'Astrophys. J.', count: 1 },
-    { journal: 'Phys. Rev. D', count: 1 }
+    { journal: 'Phys. Rev. D', count: 1 },
+    { journal: 'arXiv', count: 3 }
   ];
 
   const labels = journalCounts.map(item => item.journal);
