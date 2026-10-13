@@ -24,159 +24,158 @@ author_profile: true
 - **L. Lui**, Z. Zhang, A. Torres-Orjuela. (2026). *A Dark Matter Masquerade: Degeneracies in Black Hole and Accretion Inference from X-ray Reflection Measurements and Prospects for Compact Dark Matter.* [arXiv:2026.34567]
 
 
-<!-- Chart.js and Inspire HEP automatic linking script -->
+<!-- Chart.js and improved Inspire HEP automatic linking script -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-  // Utility: normalize strings for fuzzy matching
+  // Improved client-side enrichment:
+  // - Robust fallback: if Inspire API is blocked/fails, build chart from page contents
+  // - Fuzzy matching between page items and Inspire records using token overlap so truncated titles still match
+  // - Directly link arXiv: IDs found in the page
+
   function normalize(s) {
-    return (s||'').toLowerCase().replace(/\s+/g,' ').replace(/[^\w ]/g,'').trim();
+    return (s||'').toLowerCase().replace(/\s+/g,' ').replace(/[\u2018\u2019\u201c\u201d]/g, "'").replace(/[^\w \-:\.\/]/g,'').trim();
   }
 
-  async function fetchInspireAuthorPublications(authorId, pageSize = 250) {
-    // Try several possible endpoints/field shapes and be defensive in parsing
-    const url = `https://inspirehep.net/api/literature?authors=${authorId}&size=${pageSize}&fields=publication_info,dois,arxiv_eprints,titles`;
-    const res = await fetch(url);
-    if (!res.ok) throw new Error('Inspire fetch failed: ' + res.status);
-    const data = await res.json();
-    const records = data.hits?.hits || data._embedded?.records || data.records || [];
-    return records;
+  function words(s){
+    return normalize(s).split(/\s+/).filter(w => w.length>3);
   }
 
-  function extractRecordInfo(rec) {
-    // Support multiple API shapes
-    const meta = rec.metadata || rec;
-    const titles = (meta.titles && meta.titles.length) ? meta.titles.map(t => t.title) : (meta.titles ? [meta.titles] : (meta.title ? [meta.title] : []));
-    const title = titles.length ? titles[0] : '';
-
-    // DOI
-    let doi = null;
-    if (meta.dois && meta.dois.length) doi = meta.dois[0].value || meta.dois[0];
-    else if (meta.doi) doi = meta.doi;
-
-    // arXiv
-    let arxiv = null;
-    if (meta.arxiv_eprints && meta.arxiv_eprints.length) {
-      arxiv = meta.arxiv_eprints[0].value || meta.arxiv_eprints[0].arxiv_id || meta.arxiv_eprints[0];
-    }
-
-    // publication info / journal
-    let journal = null;
-    const pubs = meta.publication_info || meta.publication || meta.publicationInfo || [];
-    if (pubs && pubs.length) {
-      const p = pubs[0];
-      journal = p.journal_title || p.journal || p.journal_title_short || p.title || null;
-      if (!journal && typeof p === 'string') journal = p;
-    }
-
-    return { title, doi, arxiv, journal };
+  function tokenOverlap(a,b){
+    const A = new Set(words(a));
+    const B = new Set(words(b));
+    let common=0; for (const x of A) if (B.has(x)) common++;
+    return common;
   }
 
-  function buildChart(containerId, labels, values) {
-    const ctx = document.getElementById(containerId).getContext('2d');
-    const palette = ['#4e79a7', '#f28e2b', '#e15759', '#76b7b2', '#59a14f', '#edc949', '#af7aa1', '#ff9da7', '#9c755f', '#bab0ac'];
-    new Chart(ctx, {
-      type: 'pie',
-      data: {
-        labels: labels,
-        datasets: [{ data: values, backgroundColor: palette.slice(0, labels.length), borderColor: '#fff', borderWidth: 1 }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: { legend: { position: 'bottom' }, tooltip: { callbacks: { label: c => `${c.label}: ${c.parsed}` } } }
-      }
+  function parseBracketCitation(text){
+    // Find first bracketed content
+    const m = text.match(/\[([^\]]+)\]/);
+    return m ? m[1].trim() : null;
+  }
+
+  function buildChartFromCounts(counts){
+    const labels = Object.keys(counts);
+    const values = labels.map(l => counts[l]);
+    const canvas = document.getElementById('journalChartCanvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    const palette = ['#4e79a7','#f28e2b','#e15759','#76b7b2','#59a14f','#edc949','#af7aa1','#ff9da7','#9c755f'];
+    // Clear previous chart area
+    canvas.width = canvas.clientWidth * devicePixelRatio;
+    canvas.height = canvas.clientHeight * devicePixelRatio;
+    if (window._journalChart) { window._journalChart.destroy(); window._journalChart=null; }
+    window._journalChart = new Chart(ctx, {
+      type: 'pie', data: { labels, datasets:[{ data: values, backgroundColor: palette.slice(0,labels.length), borderColor:'#fff', borderWidth:1 }] },
+      options: { responsive: true, maintainAspectRatio:false, plugins:{ legend:{position:'bottom'}, tooltip:{callbacks:{label: c=>`${c.label}: ${c.parsed}`}} } }
     });
   }
 
-  async function enrichPage() {
+  async function fetchInspireAuthorPublications(authorId, pageSize=250){
+    // Try the literature endpoint by author id using the author resource if available
+    // Multiple possible shapes are handled by extractRecordInfo
+    const url = `https://inspirehep.net/api/literature?authors=${authorId}&size=${pageSize}&fields=publication_info,dois,arxiv_eprints,titles`;
+    const r = await fetch(url);
+    if (!r.ok) throw new Error('Inspire fetch failed: ' + r.status);
+    return await r.json();
+  }
+
+  function extractRecordInfo(rec){
+    const meta = rec.metadata || rec;
+    const titles = (meta.titles && meta.titles.length) ? meta.titles.map(t=>t.title||t) : (meta.title ? [meta.title] : []);
+    const title = titles.length?titles[0]:'';
+    let doi=null; if (meta.dois && meta.dois.length) doi = meta.dois[0].value || meta.dois[0];
+    let arxiv=null; if (meta.arxiv_eprints && meta.arxiv_eprints.length) arxiv = meta.arxiv_eprints[0].value || meta.arxiv_eprints[0].arxiv_id || meta.arxiv_eprints[0];
+    // publication info
+    let journal=null; let year=null;
+    const pubs = meta.publication_info || meta.publication || [];
+    if (pubs && pubs.length){
+      const p = pubs[0];
+      journal = p.journal_title || p.journal || p.journal_title_short || p.title || null;
+      year = p.year || p.pubyear || null;
+      // sometimes volume/page are present
+      const volume = p.volume || p.journal_volume || null;
+      const page = p.page || p.page_start || null;
+      if (volume && page) journal = `${journal} ${volume}, ${page}`;
+    }
+    return { title, doi, arxiv, journal, year };
+  }
+
+  async function enrichPublications(){
+    const lis = Array.from(document.querySelectorAll('li'));
+    // initial counts from page: count bracketed citations
+    const counts = {};
+    lis.forEach(li=>{
+      const bc = parseBracketCitation(li.textContent);
+      if (!bc) return;
+      // detect arXiv id
+      const arxivMatch = bc.match(/arxiv[:\s]?([0-9]{4}\.\d{4,5}|[a-z\-]+\/[0-9]{7})/i);
+      if (arxivMatch) { counts['arXiv (preprints)'] = (counts['arXiv (preprints)']||0)+1; return; }
+      // take journal up to first digit (volume/year)
+      const jMatch = bc.match(/^([^\d]+)\s*(\d.*)?$/);
+      const jName = jMatch ? jMatch[1].trim() : bc;
+      counts[jName] = (counts[jName]||0)+1;
+    });
+
+    // Render chart from page counts as a fallback immediately so visitors see something
+    buildChartFromCounts(counts);
+
+    // Try to fetch Inspire and refine counts + attach links
     try {
-      const authorId = 2960480; // from user-provided Inspire HEP link
-      const records = await fetchInspireAuthorPublications(authorId, 1000);
+      const authorId = 2960480; // user-provided
+      const raw = await fetchInspireAuthorPublications(authorId, 1000);
+      const records = raw.hits?.hits || raw._embedded?.records || raw.records || [];
+      const recs = records.map(extractRecordInfo).filter(r=>r.title);
 
-      const counts = {}; // journal -> count
-      let arxivCount = 0;
-      const mapping = []; // {title, doi, arxiv, journal}
+      // Recompute counts from Inspire if we got useful journal names
+      const inspireCounts = {};
+      recs.forEach(r=>{
+        if (r.journal) inspireCounts[r.journal] = (inspireCounts[r.journal]||0)+1;
+        else if (r.arxiv) inspireCounts['arXiv (preprints)'] = (inspireCounts['arXiv (preprints)']||0)+1;
+        else inspireCounts['Other'] = (inspireCounts['Other']||0)+1;
+      });
+      // if inspireCounts has entries, use them to update chart
+      if (Object.keys(inspireCounts).length > 0) buildChartFromCounts(inspireCounts);
 
-      records.forEach(r => {
-        const info = extractRecordInfo(r);
-        // Skip empty titles
-        if (!info.title) return;
-        mapping.push(info);
-        if (info.journal) {
-          counts[info.journal] = (counts[info.journal] || 0) + 1;
-        } else if (info.doi) {
-          // Some records have DOIs but no publication_info - treat as journal
-          counts['Published (no journal metadata)'] = (counts['Published (no journal metadata)'] || 0) + 1;
-        } else if (info.arxiv) {
-          arxivCount += 1;
-        } else {
-          // Unknown - count as Other
-          counts['Other'] = (counts['Other'] || 0) + 1;
+      // Now fuzzy-match records to list items and attach links
+      const taken = new Set();
+      // Precompute tokens for recs and lis
+      const recTokens = recs.map(r=>({r, tokens: new Set(words(r.title))}));
+      lis.forEach(li=>{
+        const liText = li.textContent || '';
+        const bc = parseBracketCitation(liText);
+        // If bracket already looks like arXiv with id, link it directly
+        const arxivMatch = (bc||'').match(/arxiv[:\s]?([0-9]{4}\.\d{4,5}|[a-z\-]+\/[0-9]{7})/i);
+        if (arxivMatch){
+          const aid = arxivMatch[1];
+          const url = `https://arxiv.org/abs/${encodeURIComponent(aid)}`;
+          li.innerHTML = li.innerHTML.replace(/\[([^\]]+)\]/, `<a href="${url}" target="_blank" rel="noopener">[$1]</a>` + ' <em>(arXiv preprint)</em>');
+          return;
+        }
+        // find best matching record by token overlap
+        let best=null, bestScore=0;
+        const liTokens = words(liText);
+        for (let i=0;i<recTokens.length;i++){
+          if (taken.has(i)) continue;
+          // compute overlap between li and rec title
+          const overlap = tokenOverlap(liText, recTokens[i].r.title);
+          if (overlap>bestScore){ bestScore=overlap; best=i; }
+        }
+        if (best !== null && bestScore >= 2){ // at least two token overlap
+          const rec = recTokens[best].r;
+          taken.add(best);
+          const url = rec.doi ? `https://doi.org/${encodeURIComponent(rec.doi)}` : (rec.arxiv ? `https://arxiv.org/abs/${encodeURIComponent(rec.arxiv)}` : null);
+          if (url){
+            // Replace first bracket with link
+            li.innerHTML = li.innerHTML.replace(/\[([^\]]+)\]/, `<a href="${url}" target="_blank" rel="noopener">[$1]</a>` + (rec.arxiv && !rec.doi ? ' <em>(arXiv preprint)</em>' : ''));
+          }
         }
       });
 
-      if (arxivCount > 0) counts['arXiv (preprints)'] = (counts['arXiv (preprints)'] || 0) + arxivCount;
-
-      // Build chart from counts
-      const labels = Object.keys(counts);
-      const values = labels.map(l => counts[l]);
-
-      if (labels.length) buildChart('journalChartCanvas', labels, values);
-
-      // Now try to match records to page list items and attach links
-      const listItems = Array.from(document.querySelectorAll('li'));
-      const normalizeShort = s => normalize(s).slice(0, 60); // short snippet for matching
-
-      mapping.forEach(rec => {
-        const tnorm = normalizeShort(rec.title || '');
-        if (!tnorm) return;
-        // find a list item that contains a fuzzy match of title
-        const li = listItems.find(li => normalizeShort(li.textContent).includes(tnorm));
-        if (!li) {
-          // try looser match by first 12 characters
-          const tiny = normalize(rec.title || '').slice(0,12);
-          const li2 = listItems.find(li => normalize(li.textContent).includes(tiny));
-          if (li2) attachLinkToItem(li2, rec);
-          else console.debug('No page match for title (could be missing/templated):', rec.title);
-        } else {
-          attachLinkToItem(li, rec);
-        }
-      });
-
-    } catch (err) {
-      console.error('Error enriching publications page:', err);
-      // Fallback: if Inspire is blocked, you still have the hardcoded chart counts; do nothing.
+    } catch (err){
+      console.warn('Inspire fetch/processing failed, using page-derived counts. Error:', err);
+      // we already rendered counts from the page, nothing else to do
     }
   }
 
-  function attachLinkToItem(li, rec) {
-    // Find first bracketed citation in the item's HTML and wrap it with link
-    if (!li || !rec) return;
-    const url = rec.doi ? `https://doi.org/${encodeURIComponent(rec.doi)}` : (rec.arxiv ? `https://arxiv.org/abs/${encodeURIComponent(rec.arxiv)}` : null);
-    if (!url) return;
-
-    // Replace only the first bracketed citation
-    const html = li.innerHTML;
-    const bracketRegex = /\[([^\]]+)\]/;
-    if (bracketRegex.test(html)) {
-      li.innerHTML = html.replace(bracketRegex, function(match, p1) {
-        const suffix = rec.arxiv && !rec.doi ? ' <em>(arXiv preprint)</em>' : '';
-        return `<a href="${url}" target="_blank" rel="noopener">[${p1}]</a>${suffix}`;
-      });
-    } else {
-      // If no bracket found, append a small link after the line
-      const suffixLink = document.createElement('a');
-      suffixLink.href = url;
-      suffixLink.target = '_blank';
-      suffixLink.rel = 'noopener';
-      suffixLink.textContent = rec.doi ? ' DOI' : ' arXiv';
-      li.appendChild(suffixLink);
-      if (rec.arxiv && !rec.doi) {
-        const em = document.createElement('em'); em.textContent = ' (arXiv preprint)'; li.appendChild(em);
-      }
-    }
-  }
-
-  // Run after DOM loaded
-  window.addEventListener('DOMContentLoaded', enrichPage);
+  window.addEventListener('DOMContentLoaded', enrichPublications);
 </script>
