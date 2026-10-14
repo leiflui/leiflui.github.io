@@ -4,9 +4,6 @@ title: "EMRIs in Astrophysical Environments"
 permalink: /research/emris-in-astrophysical-environments/
 author_profile: true
 ---
-
-# EMRIs in Astrophysical Environments
-
 ## Extreme-Mass-Ratio Inspirals (EMRIs)
 ------
 ![LoopingDemo]({{ '/images/kerr_geodesics_rotating_trails_9_16_long.gif' | relative_url }})
