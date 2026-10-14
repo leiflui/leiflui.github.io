@@ -4,11 +4,10 @@ title: "Research"
 permalink: /research/
 author_profile: true
 ---
-![My Image](images/BH_shadow.png)</br>
 
-I like solving puzzles, so physics is the natural place to harness my creative energy. I enjoy learning new mathematical techniques and applying them to real-life systems. Currently, my main research area is black-hole (BH) physics, but from time to time, I do enjoy learning about other interesting areas of physics like fluid dynamics, electrodynamics, complex systems, etc. The most exciting part is when I get to integrate ideas that I learn from other disciplines with my research on BHs. Below, I provide an overview of my current projects, and some thoughts that keep me up at night...
+I like solving puzzles, so physics is the natural place to harness my creative energy. I enjoy learning new mathematical techniques and applying them to real-life systems. Currently, my main research area is black-hole (BH) physics, but from time to time, I do enjoy learning about other interesting areas of physics like fluid dynamics, electrodynamics, complex systems, etc. The most exciting part is when I get to integrate ideas that I learn from other disciplines with my research on BHs. In a sentence, I develop mathematical models to study the relativistic interactions of compact objects in astrophysical environments.
 
-<!-- Research card grid: 3 columns x 2 rows with hover overlays. -->
+For my fellow enthusiasts, I provide an overview of my current projects and some thoughts that keep me up at night...
 
 <style>
 .research-grid {
