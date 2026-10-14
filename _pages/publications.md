@@ -13,7 +13,7 @@ author_profile: true
     { journal: 'Phys. Rev. Lett.', count: 1 },
     { journal: 'Astrophys. J.', count: 1 },
     { journal: 'Phys. Rev. D', count: 1 },
-    { journal: 'arXiv', count: 3 }
+    { journal: 'arXiv', count: 4 }
   ];
 
   const labels = journalCounts.map(item => item.journal);
@@ -64,6 +64,7 @@ author_profile: true
 - Y. Yang, **L. Lui**, A. Torres-Orjuela, X. Chen. (2026). *Relativistic tidal dissipation and the gravitational-wave signal of a white dwarf orbiting an intermediate-mass black hole.* [Phys. Rev. D 114, 023028 (2026)](https://doi.org/10.1103/r5gt-f241).
 
 ## Preprints:
+- **L. Lui** & A. K-.W. Chung, A. (2026). *Quasinormal modes of rotating black holes with ultralight scalar fields.* [arXiv:2610.16054](https://arxiv.org/abs/2610.16054)
 - P. Amaro-Seoane, **L. Lui**, A. Torres-Orjuela, X. Chen. (2026). *Electromagnetic alignment and jet precession around supermassive black holes: Quasiperiodic oscillations in tidal disruption events.* [arXiv:2609.05350](https://arxiv.org/abs/2609.05350)
 - **L. Lui**, A. K-.W. Chung, A. Torres-Orjuela. (2026). *Devoured by a Hairy Gargantua: Probing Massive Scalar Charges with Non-minimal Curvature Coupling with Extreme-Mass-Ratio Inspirals.* [arXiv:2608.28037](https://arxiv.org/abs/2608.28037)
 - **L. Lui**, Z. Zhang, A. Torres-Orjuela. (2026). *A Dark Matter Masquerade: Degeneracies in Black Hole and Accretion Inference from X-ray Reflection Measurements and Prospects for Compact Dark Matter Halo Constraints.* [arXiv:2608.20752](https://arxiv.org/abs/2608.20752)
