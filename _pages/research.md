@@ -65,7 +65,7 @@ For my fellow enthusiasts, I provide an overview of my current projects and some
 <div class="research-grid">
   <a class="research-link" href="/research/emris-in-astrophysical-environments/">
     <div class="research-card" tabindex="0">
-      <img src="/images/research/emris.jpg" alt="EMRIs in Astrophysical Environments">
+      <img src="/images/research/EMRI_Aero.png" alt="EMRIs in Astrophysical Environments">
       <div class="research-overlay">EMRIs in Astrophysical Environments</div>
     </div>
   </a>
