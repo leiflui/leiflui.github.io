@@ -80,7 +80,7 @@ I like solving puzzles, so physics is the natural place to harness my creative e
 
   <a class="research-link" href="/research/grhd-grmhd-simulations/">
     <div class="research-card" tabindex="0">
-      <img src="/images/research/grhd_grmhd.jpg" alt="GRHD/GRMHD Simulations">
+      <img src="/images/research/grhd_grmhd.png" alt="GRHD/GRMHD Simulations">
       <div class="research-overlay">GRHD / GRMHD Simulations</div>
     </div>
   </a>
