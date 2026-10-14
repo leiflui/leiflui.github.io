@@ -7,4 +7,4 @@ author_profile: true
 
 ## Problems in Cosmology
 
-Notes on open problems in cosmology relevant to my research interests. Content coming soon.
+This page is under development. It will collect notes and references related to open problems in cosmology.
