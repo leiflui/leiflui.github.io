@@ -86,7 +86,7 @@ For my fellow enthusiasts, I provide an overview of my current projects and some
 
   <a class="research-link" href="/research/modeling-xray-signatures-near-smbhs/">
     <div class="research-card" tabindex="0">
-      <img src="/images/research/xray_signatures.jpg" alt="Modeling X-ray Signatures near SMBHs">
+      <img src="/images/research/BH_shadow.png" alt="Modeling X-ray Signatures near SMBHs">
       <div class="research-overlay">Modeling X-ray Signatures near SMBHs</div>
     </div>
   </a>
