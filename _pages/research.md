@@ -72,7 +72,7 @@ For my fellow enthusiasts, I provide an overview of my current projects and some
 
   <a class="research-link" href="/research/bh-spectroscopy-in-astrophysical-environments/">
     <div class="research-card" tabindex="0">
-      <img src="/images/research/bh_spectroscopy.jpg" alt="BH Spectroscopy in Astrophysical Environments">
+      <img src="/images/research/bh_spectroscopy.png" alt="BH Spectroscopy in Astrophysical Environments">
       <div class="research-overlay">BH Spectroscopy in Astrophysical Environments</div>
     </div>
   </a>
