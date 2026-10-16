@@ -66,35 +66,35 @@ For my fellow enthusiasts, I provide an overview of my current projects and some
   <a class="research-link" href="/research/emris-in-astrophysical-environments/">
     <div class="research-card" tabindex="0">
       <img src="/images/research/EMRI_Aero.png" alt="EMRIs in Astrophysical Environments">
-      <div class="research-overlay">EMRIs in Astrophysical Environments</div>
+      <div class="research-overlay">Extreme-Mass-Ratio Inspirals in Astrophysical Environments</div>
     </div>
   </a>
 
   <a class="research-link" href="/research/bh-spectroscopy-in-astrophysical-environments/">
     <div class="research-card" tabindex="0">
       <img src="/images/research/bh_spectroscopy.png" alt="BH Spectroscopy in Astrophysical Environments">
-      <div class="research-overlay">BH Spectroscopy in Astrophysical Environments</div>
+      <div class="research-overlay">Black-Hole Spectroscopy in Astrophysical Environments</div>
     </div>
   </a>
 
   <a class="research-link" href="/research/grhd-grmhd-simulations/">
     <div class="research-card" tabindex="0">
       <img src="/images/research/grhd_grmhd.png" alt="GRHD/GRMHD Simulations">
-      <div class="research-overlay">GRHD / GRMHD Simulations</div>
+      <div class="research-overlay">General Relativistic Magneto-Hydrodynamic Simulations</div>
     </div>
   </a>
 
   <a class="research-link" href="/research/modeling-xray-signatures-near-smbhs/">
     <div class="research-card" tabindex="0">
       <img src="/images/research/BH_shadow.png" alt="Modeling X-ray Signatures near SMBHs">
-      <div class="research-overlay">Modeling X-ray Signatures near SMBHs</div>
+      <div class="research-overlay">Modeling X-ray Signatures near Black-Hole Accretion Disks</div>
     </div>
   </a>
 
   <a class="research-link" href="/research/modeling-em-signals-from-gw-sources/">
     <div class="research-card" tabindex="0">
       <img src="/images/research/em_signals_gw.png" alt="Modeling EM Signals from GW Sources">
-      <div class="research-overlay">Modeling EM Signals from High-Energy Sources</div>
+      <div class="research-overlay">Modeling Electromagnetic Signals from High-Energy Sources</div>
     </div>
   </a>
 
