@@ -94,7 +94,7 @@ For my fellow enthusiasts, I provide an overview of my current projects and some
   <a class="research-link" href="/research/modeling-em-signals-from-gw-sources/">
     <div class="research-card" tabindex="0">
       <img src="/images/research/em_signals_gw.png" alt="Modeling EM Signals from GW Sources">
-      <div class="research-overlay">Modeling EM Signals from GW Sources</div>
+      <div class="research-overlay">Modeling EM Signals from High-Energy Sources</div>
     </div>
   </a>
 
