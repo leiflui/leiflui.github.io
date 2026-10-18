@@ -87,7 +87,7 @@ For my fellow enthusiasts, I provide an overview of my current projects and some
   <a class="research-link" href="/research/modeling-xray-signatures-near-smbhs/">
     <div class="research-card" tabindex="0">
       <img src="/images/research/BH_shadow.png" alt="Modeling X-ray Signatures near SMBHs">
-      <div class="research-overlay">Modeling X-ray Signatures near Black-Hole Accretion Disks</div>
+      <div class="research-overlay">Modeling X-ray Signatures from Accretion Disks</div>
     </div>
   </a>
 
@@ -101,7 +101,7 @@ For my fellow enthusiasts, I provide an overview of my current projects and some
   <a class="research-link" href="/research/problems-in-cosmology/">
     <div class="research-card" tabindex="0">
       <img src="/images/research/cosmology.png" alt="Problems in Cosmology and Multi-Messenger Astrophysics">
-      <div class="research-overlay">Problems in Cosmology</div>
+      <div class="research-overlay">Problems in Cosmology and Multi-Messenger Astrophysics</div>
     </div>
   </a>
 </div>
