@@ -100,7 +100,7 @@ For my fellow enthusiasts, I provide an overview of my current projects and some
 
   <a class="research-link" href="/research/problems-in-cosmology/">
     <div class="research-card" tabindex="0">
-      <img src="/images/research/cosmology.jpg" alt="Problems in Cosmology and Multi-Messenger Astrophysics">
+      <img src="/images/research/cosmology.png" alt="Problems in Cosmology and Multi-Messenger Astrophysics">
       <div class="research-overlay">Problems in Cosmology</div>
     </div>
   </a>
