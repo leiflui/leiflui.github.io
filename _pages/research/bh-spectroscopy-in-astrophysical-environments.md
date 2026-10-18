@@ -11,7 +11,7 @@ There is a famous saying in the gravitational-wave (GW) community: _"Black holes
 
 $$\left[ -\frac{\hbar^2}{2m} \frac{d^2}{dr^2} + V(r) \right] \psi(r) = E \psi(r)$$
 
-In general relativity (GR), small perturbations on a rotating black holes (BHs) are governed by the Teukolsky equation. Because the black hole is spinning, the spacetime is more complex, but the equations can still be separated into distinct radial and angular components. By switching to generalized "tortoise coordinates", $r_{*}$, defined by the relation $\frac{dr_*}{dr} = \frac{r^2+a^2}{\Delta}$, where $\Delta = r^2 - 2Mr + a^2$, the event horizon is once again stretched out to negative infinity. Through specific mathematical transformations (such as the Sasaki-Nakamura SN or Detweiler transformations), the radial part of the Teukolsky equation maps directly onto the exact same Schrödinger-like wave equation
+In general relativity (GR), small perturbations on a rotating black holes (BHs) are governed by the Teukolsky equation. Because the black hole is spinning, the spacetime is more complex, but the equations can still be separated into distinct radial and angular components. By switching to generalized "tortoise coordinates", $r_*$, defined by the relation $\frac{dr_*}{dr} = \frac{r^2+a^2}{\Delta}$, where $\Delta = r^2 - 2Mr + a^2$, the event horizon is once again stretched out to negative infinity. Through specific mathematical transformations (such as the Sasaki-Nakamura SN or Detweiler transformations), the radial part of the Teukolsky equation maps directly onto the exact same Schrödinger-like wave equation
 
 $$\left[ -\frac{d^2}{dr_*^2} + V_{\text{eff}}(r, \omega, m, a) \right] \Psi(r_*) = \omega^2 \Psi(r_*)$$
 
