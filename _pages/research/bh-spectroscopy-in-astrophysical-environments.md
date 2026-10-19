@@ -4,7 +4,7 @@ title: "Black-Hole Spectroscopy in Astrophysical Environments"
 permalink: /research/bh-spectroscopy-in-astrophysical-environments/
 author_profile: true
 ---
-
+![LoopingDemo]({{ '/images/SXS0389_horizon_ring_gain1.gif' | relative_url }})
 ## Black-Hole Spectroscopy and Quasi-Normal Modes (QNMs)
 ------
 There is a famous saying in the gravitational-wave (GW) community: _"Black holes are the hydrogen atom of astrophysics."_ In quantum mechanics, the stationary states of the hydrogen atom are determined by the radial part of the Schrödinger equation
