@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "EMRIs in Astrophysical Environments"
+title: "Extreme-Mass-Ratio Inspirals in Astrophysical Environments"
 permalink: /research/emris-in-astrophysical-environments/
 author_profile: true
 ---
