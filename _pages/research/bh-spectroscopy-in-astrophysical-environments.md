@@ -6,7 +6,7 @@ author_profile: true
 ---
 ## Black-Hole Spectroscopy and Quasi-Normal Modes (QNMs)
 ------
-![LoopingDemo]({{ '/images/EqualMassMerger_CurvatureDeviation_16_9' | relative_url }})
+![LoopingDemo]({{ '/images/EqualMassMerger_CurvatureDeviation_16_9.gif' | relative_url }})
 
 There is a famous saying in the gravitational-wave (GW) community: _"Black holes are the hydrogen atom of astrophysics."_ In quantum mechanics, the stationary states of the hydrogen atom are determined by the radial part of the Schrödinger equation
 
