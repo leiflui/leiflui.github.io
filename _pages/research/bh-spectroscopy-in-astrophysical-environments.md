@@ -8,7 +8,7 @@ author_profile: true
 ------
 ![LoopingDemo]({{ '/images/SXS0389_coolwarm_merger.gif' | relative_url }})
 
-*FIG. 2: Apparent-horizon evolution in an equal-mass, initially nonspinning merger (SXS:BBH:0389). Colors show intrinsic-curvature deviations from the early individual horizons before merger and the settled remnant afterward (blue: negative, red: positive).*
+*FIG. 1: Apparent-horizon evolution in an equal-mass, initially nonspinning merger (SXS:BBH:0389). Colors show intrinsic-curvature deviations from the early individual horizons before merger and the settled remnant afterward (blue: negative, red: positive).*
 
 There is a famous saying in the gravitational-wave (GW) community: _"Black holes are the hydrogen atom of astrophysics."_ In quantum mechanics, the stationary states of the hydrogen atom are determined by the radial part of the Schrödinger equation
 
