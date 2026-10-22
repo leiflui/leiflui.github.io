@@ -32,14 +32,6 @@ description: "A weekly research watch for gravitational physics and relativistic
   <p class="arxiv-badges">{% for topic in preferences.topics %}<span class="arxiv-badge">{{ topic.name | escape }}</span>{% endfor %}</p>
   <p>Source categories: {% for category in preferences.categories %}<code>{{ category | escape }}</code>{% unless forloop.last %}, {% endunless %}{% endfor %}.</p>
 
-  <h2>Author flags</h2>
-  <p>Collaborators and notable authors receive distinct badges. A flagged author's paper can appear even without a topic keyword match, within the categories above.</p>
-  <p class="arxiv-badges">
-    {% for name in preferences.author_flags.collaborators %}<span class="arxiv-badge arxiv-collaborators">Collaborator: {{ name | escape }}</span>{% endfor %}
-    {% for name in preferences.author_flags.notable_authors %}<span class="arxiv-badge arxiv-notable_authors">Notable author: {{ name | escape }}</span>{% endfor %}
-  </p>
-  {% if preferences.author_flags.collaborators.size == 0 and preferences.author_flags.notable_authors.size == 0 %}<p>No author names have been flagged yet.</p>{% endif %}
-
   <p>The schedule is Tuesday at 08:17 Hong Kong time, covering the seven days ending Tuesday at 00:00. GitHub scheduling and arXiv indexing delays can affect availability. PDFs are linked directly from arXiv.</p>
   <p>Inspired by <a href="https://github.com/VojtechW/vojtechs-arxiv-digest">Vojtěch's arXiv digest</a>. This independent project is not affiliated with or endorsed by arXiv.</p>
 </div>
