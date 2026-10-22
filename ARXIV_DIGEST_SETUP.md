@@ -74,7 +74,7 @@ Edit `_data/arxiv_preferences.json` in GitHub Desktop or GitHub's file editor.
   categories even if none of the topic keywords match. Set `false` to flag topic matches only.
 - `max_papers`: number of papers displayed, initially 20. Every match stays in the JSON download.
 
-Your 11 collaborators and 15 notable authors are already configured. To add more names,
+Your 11 collaborators and 20 notable authors are already configured. To add more names,
 edit those lists. For example:
 
 ```json
