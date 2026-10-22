@@ -4,7 +4,6 @@ import argparse
 from datetime import date, datetime, time as day_time, timedelta, timezone
 import html
 import json
-import os
 from pathlib import Path
 import re
 import sys
@@ -371,12 +370,9 @@ def main():
             papers, coverage = collect(preferences, start, end)
         snapshot = make_snapshot(preferences, papers, coverage, start, end, now, args.demo)
         if not args.demo:
-            cache_path = args.root / f'files/arxiv-digest/{snapshot["issue"]}.json'
-            try:
-                previous = json.loads(cache_path.read_text()) if cache_path.exists() else None
-            except (OSError, ValueError):
-                previous = None
-            arxiv_reviews.enrich(snapshot, preferences, os.environ.get("OPENROUTER_API_KEY"), previous)
+            review_path = arxiv_reviews.review_path(args.root, snapshot["issue"])
+            document = json.loads(review_path.read_text()) if review_path.exists() else None
+            arxiv_reviews.enrich(snapshot, preferences, document)
             if snapshot.get("ai_reviews"):
                 print("AI reviews: " + snapshot["ai_reviews"]["status"])
         result = preview(args.root, snapshot) if args.demo or args.preview else publish(args.root, snapshot)

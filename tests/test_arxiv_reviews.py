@@ -1,13 +1,14 @@
 from datetime import datetime
 import json
 from pathlib import Path
+from tempfile import TemporaryDirectory
 import unittest
-from unittest.mock import Mock
-from urllib.error import HTTPError
+from unittest.mock import Mock, patch
 from zoneinfo import ZoneInfo
 
 from scripts import arxiv_digest as digest
 from scripts import arxiv_reviews as reviews
+from scripts import review_arxiv as workflow
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -39,38 +40,23 @@ def snapshot():
         "papers_in_window": 4, "categories": preferences["categories"]}, start, end, now)
 
 
-def fill(data, previous=None, preferences=None, **overrides):
-    def produce(*args):
-        return {**review(), "model": reviews.DEFAULT_MODEL, "source": SOURCE["kind"],
-                "source_url": args[0]["url"].replace("/abs/", "/html/")}
-    defaults = {"source_fetch": Mock(return_value=SOURCE), "model_fetch": Mock(return_value=1_000_000),
-                "review_fetch": Mock(side_effect=produce), "sleep": lambda _: None}
-    defaults.update(overrides)
-    reviews.enrich(data, preferences or settings(), "synthetic-test-key",
-                   previous=previous, **defaults)
-    return defaults
+def document(data):
+    return {"issue": data["issue"], "reviews": [
+        {**review(), "id": paper["id"], "fingerprint": reviews.fingerprint(paper, settings()),
+         "model": "Synthetic test model", "source": SOURCE["kind"],
+         "source_url": paper["url"].replace("/abs/", "/html/"), "generated_at": data["generated_at"]}
+        for paper in data["papers"][:2]]}
 
 
-class SourceAndCostTests(unittest.TestCase):
-    def test_paid_models_and_unbounded_review_counts_are_rejected(self):
-        for change in [{"model": "paid/model"}, {"max_papers": 11}, {"max_papers": True}]:
+class SourceTests(unittest.TestCase):
+    def test_unbounded_review_counts_and_invalid_enabled_are_rejected(self):
+        for change in [{"max_papers": 11}, {"max_papers": True}, {"enabled": "true"}]:
             preferences = settings()
             preferences["ai_review"].update(change)
             with self.assertRaises(ValueError):
                 reviews.options(preferences)
 
-    def test_model_catalog_must_confirm_zero_pricing(self):
-        model = {"id": reviews.DEFAULT_MODEL, "context_length": 262144,
-                 "pricing": {"prompt": "0", "completion": "0"}}
-        fetch = lambda *args: json.dumps({"data": [model]}).encode()
-        self.assertEqual(reviews.free_model(model["id"], fetch), 262144)
-        model["pricing"]["request"] = "0.001"
-        with self.assertRaises(ValueError):
-            reviews.free_model(model["id"], fetch)
-        with self.assertRaises(ValueError):
-            reviews.free_model("missing:free", fetch)
-
-    def test_html_extraction_preserves_math_and_ignores_navigation_and_scripts(self):
+    def test_html_preserves_math_and_ignores_navigation_and_scripts(self):
         parser = reviews.PaperHTML()
         parser.feed('<nav>Site menu</nav><article class="ltx_document"><h1>Paper</h1>'
                     '<p>Equation <math alttext="x^2">duplicate math</math>.</p>'
@@ -84,7 +70,7 @@ class SourceAndCostTests(unittest.TestCase):
         incomplete.feed('<article class="ltx_document">incomplete')
         self.assertEqual(incomplete.text(), "")
 
-    def test_source_uses_complete_html_without_fetching_pdf(self):
+    def test_complete_html_needs_no_pdf(self):
         paper = snapshot()["papers"][0]
         raw = ('<article class="ltx_document"><p>' + "Scientific body text. " * 200 + '</p></article>').encode()
         fetch = Mock(return_value=raw)
@@ -102,25 +88,8 @@ class SourceAndCostTests(unittest.TestCase):
         source = reviews.fetch_source(paper, fetch=Mock(return_value=raw), sleep=lambda _: None)
         self.assertTrue(source["kind"].startswith("Abstract only"))
 
-    def test_inference_has_zero_price_cap_no_plugins_and_no_model_fallback(self):
-        response = {"model": reviews.DEFAULT_MODEL, "choices": [
-            {"finish_reason": "stop", "message": {"content": json.dumps(review())}}]}
-        fetch = Mock(return_value=json.dumps(response).encode())
-        reviews.request_review(snapshot()["papers"][0], ["Self-force"], SOURCE,
-                               reviews.DEFAULT_MODEL, 1_000_000, "synthetic-test-key", fetch=fetch)
-        payload = fetch.call_args.kwargs["payload"]
-        self.assertEqual(payload["provider"]["max_price"], {"prompt": 0, "completion": 0, "request": 0})
-        self.assertEqual(payload["plugins"], [])
-        self.assertNotIn("models", payload)
-        self.assertNotIn("tools", payload)
-        fetch.reset_mock()
-        for model, context in [("paid/model", 1_000_000), (reviews.DEFAULT_MODEL, 10)]:
-            with self.assertRaises(ValueError):
-                reviews.request_review(snapshot()["papers"][0], [], SOURCE, model, context, "synthetic-test-key", fetch=fetch)
-        fetch.assert_not_called()
 
-
-class ReviewAndCacheTests(unittest.TestCase):
+class ReviewTests(unittest.TestCase):
     def test_quality_needs_full_text_and_verbatim_evidence(self):
         for source, change in [(SOURCE, {"evidence_quote": "Invented evidence"}),
                                ({"kind": "Abstract only", "text": SOURCE["text"]}, {}),
@@ -133,67 +102,122 @@ class ReviewAndCacheTests(unittest.TestCase):
         self.assertIsNone(reviews.validate_review(abstract, {"kind": "Abstract only", "text": ""})["quality_score"])
         self.assertNotIn("quality_rank", reviews.validate_review({**review(), "quality_rank": "invented"}, SOURCE))
 
-    def test_missing_key_and_demo_make_no_service_calls(self):
+    def test_attaching_reviews_and_demo_make_no_network_calls(self):
         for demo in [False, True]:
             data = snapshot()
             data["demo"] = demo
-            call = Mock(side_effect=AssertionError("Unexpected service call"))
-            reviews.enrich(data, settings(), None, model_fetch=call, source_fetch=call, review_fetch=call)
-            call.assert_not_called()
-            if not demo:
-                self.assertEqual(data["ai_reviews"]["completed"], 0)
+            with patch.object(reviews, "read_url", side_effect=AssertionError("Unexpected network call")):
+                reviews.enrich(data, settings())
+                reviews.enrich(data, settings(), document(data))
+            if demo:
+                self.assertNotIn("ai_reviews", data)
+            else:
+                self.assertEqual(data["ai_reviews"]["completed"], 2)
 
-    def test_successful_reruns_reuse_cache_and_changed_topics_invalidate_it(self):
-        previous = snapshot()
-        fill(previous)
-        data = snapshot()
-        call = Mock(side_effect=AssertionError("Cached review should not call a service"))
-        fill(data, previous=previous, model_fetch=call, source_fetch=call, review_fetch=call)
-        self.assertEqual(data["ai_reviews"]["completed"], 2)
-        self.assertEqual(data["ai_reviews"]["requests"], 0)
-        call.assert_not_called()
-        preferences = settings()
-        preferences["topics"][0]["keywords"].append("new research interest")
-        data = snapshot()
-        spies = fill(data, previous=previous, preferences=preferences)
-        self.assertEqual(spies["review_fetch"].call_count, 2)
-
-    def test_quota_or_model_failure_does_not_destroy_the_digest(self):
-        for failure in [HTTPError("https://openrouter.ai", 429, "Quota", {}, None),
-                        ValueError("Invalid model response")]:
+    def test_changed_topics_or_versions_invalidate_stale_reviews(self):
+        for changed in ["topics", "version"]:
             data = snapshot()
-            before = [paper["id"] for paper in data["papers"]]
-            fill(data, review_fetch=Mock(side_effect=failure))
-            self.assertEqual(before, [paper["id"] for paper in data["papers"]])
+            old = document(data)
+            preferences = settings()
+            if changed == "topics":
+                preferences["topics"][0]["keywords"].append("new research interest")
+            else:
+                for paper in data["papers"]:
+                    paper["version"] += 1
+            reviews.enrich(data, preferences, old)
             self.assertEqual(data["ai_reviews"]["completed"], 0)
-            self.assertIn("Some AI reviews are unavailable", digest.render_body(data))
-        call = Mock(side_effect=AssertionError("Unverified model must not be called"))
-        data = snapshot()
-        fill(data, model_fetch=Mock(side_effect=ValueError("Price not zero")), review_fetch=call)
-        call.assert_not_called()
 
-    def test_relevance_and_quality_rank_independently(self):
-        values = [review(), {**review(), "relevance_score": 2, "quality_score": 5}]
-        def produce(*args):
-            return {**values.pop(0), "source": SOURCE["kind"], "source_url": args[0]["url"].replace("/abs/", "/html/"),
-                    "model": reviews.DEFAULT_MODEL}
+    def test_bad_document_duplicate_ids_and_unsafe_source_are_rejected(self):
         data = snapshot()
-        fill(data, review_fetch=produce)
+        valid = document(data)
+        for bad in [[], {**valid, "issue": "2026-10-13"},
+                    {**valid, "reviews": valid["reviews"] * 2},
+                    {**valid, "reviews": [{**valid["reviews"][0], "source_url": "javascript:alert(1)"}]}]:
+            with self.subTest(bad=bad):
+                with self.assertRaises(ValueError):
+                    reviews.enrich(data, settings(), bad)
+
+    def test_relevance_and_quality_rank_independently_and_escape_output(self):
+        data = snapshot()
+        incoming = document(data)
+        incoming["reviews"][1].update(relevance_score=2, quality_score=5)
+        incoming["reviews"][0]["summary"] = '<script>unsafe</script> {{ site.secret }}'
+        reviews.enrich(data, settings(), incoming)
         first, second = data["papers"][:2]
         self.assertEqual(first["ai_review"]["relevance_rank"], 1)
         self.assertEqual(second["ai_review"]["quality_rank"], 1)
-        first["ai_review"]["summary"] = '<script>unsafe</script> {{ site.secret }}'
         rendered = digest.render_body(data)
         self.assertNotIn("<script>", rendered)
         self.assertNotIn("{{ site.secret }}", rendered)
         self.assertIn("Ranked by relevance", rendered)
         self.assertIn("Ranked by scientific strength", rendered)
 
-    def test_invalid_cache_and_time_budget_keep_unreviewed_papers(self):
+
+class ImportTests(unittest.TestCase):
+    def prepare(self, root, data):
+        source = lambda paper: {**SOURCE, "url": paper["url"].replace("/abs/", "/html/")}
+        return workflow.prepare(root, data, settings(), source_fetch=source, sleep=lambda _: None)
+
+    def test_prepare_import_and_metadata_rerun_preserve_reviews(self):
         data = snapshot()
-        fill(data, previous={"papers": None}, clock=Mock(side_effect=[0, 600]))
-        self.assertEqual(len(data["papers"]), 2)
-        self.assertEqual(data["ai_reviews"]["completed"], 0)
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            packet_directory = self.prepare(root, data)
+            self.assertFalse((root / "files").exists())
+            self.assertTrue((packet_directory / "manifest.json").exists())
+            page = workflow.import_reviews(root, data, settings(), document(data))
+            self.assertIn("Ranked by relevance", page.read_text())
+            stored = json.loads(reviews.review_path(root, data["issue"]).read_text())
+            rerun = snapshot()
+            reviews.enrich(rerun, settings(), stored)
+            self.assertEqual(rerun["ai_reviews"]["completed"], 2)
+            self.assertEqual(stored["reviews"][0]["model"], "Synthetic test model")
+            fetch = Mock(side_effect=AssertionError("Unchanged reviews must not fetch papers again"))
+            workflow.prepare(root, rerun, settings(), source_fetch=fetch)
+            self.assertEqual(json.loads((packet_directory / "manifest.json").read_text())["papers"], [])
+            fetch.assert_not_called()
+
+    def test_invalid_quote_or_fingerprint_changes_no_public_files(self):
+        data = snapshot()
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.prepare(root, data)
+            page = digest.publish(root, data)
+            before = page.read_text()
+            for change in [{"evidence_quote": "Invented evidence"}, {"fingerprint": "stale"}, {"model": ""}]:
+                incoming = document(data)
+                incoming["reviews"][0].update(change)
+                with self.assertRaises(ValueError):
+                    workflow.import_reviews(root, data, settings(), incoming)
+                self.assertFalse(reviews.review_path(root, data["issue"]).exists())
+                self.assertEqual(before, page.read_text())
+
+    def test_partial_import_retains_other_reviews(self):
+        data = snapshot()
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.prepare(root, data)
+            incoming = document(data)
+            workflow.import_reviews(root, data, settings(), incoming)
+            incoming["reviews"] = incoming["reviews"][:1]
+            incoming["reviews"][0]["summary"] = "Updated synthetic summary."
+            workflow.import_reviews(root, data, settings(), incoming)
+            stored = json.loads(reviews.review_path(root, data["issue"]).read_text())
+            self.assertEqual(len(stored["reviews"]), 2)
+            self.assertEqual(stored["reviews"][0]["summary"], "Updated synthetic summary.")
+
+    def test_abstract_only_review_has_no_quality_rank(self):
+        data = snapshot()
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = lambda paper: {"kind": "Abstract only: unavailable", "text": paper["abstract"], "url": paper["url"]}
+            workflow.prepare(root, data, settings(), source_fetch=source, sleep=lambda _: None)
+            incoming = document(data)
+            for entry in incoming["reviews"]:
+                entry.update(quality_score=None, evidence_quote="")
+            workflow.import_reviews(root, data, settings(), incoming)
+            self.assertEqual(data["ai_reviews"]["quality_assessed"], 0)
+            self.assertNotIn("quality_rank", data["papers"][0]["ai_review"])
 
 
 if __name__ == "__main__":
