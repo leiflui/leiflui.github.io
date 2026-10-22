@@ -1,0 +1,16 @@
+.arxiv-digest { --digest-border: var(--global-border-color, #d8e1e7); }
+.arxiv-digest .arxiv-kicker { color: var(--global-text-color-light, #537181); font-size: .85em; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.arxiv-digest .arxiv-notice { border-left: 4px solid #658c9d; background: #f3f7f8; padding: .8em 1em; color: #304454; }
+.arxiv-digest .arxiv-card { border: 1px solid var(--digest-border); border-radius: 8px; padding: 1.2em; margin: 1.2em 0; }
+.arxiv-digest .arxiv-card h3 { margin-top: 0; font-size: 1.08em; line-height: 1.4; }
+.arxiv-digest .arxiv-authors, .arxiv-digest .arxiv-meta { font-size: .85em; color: var(--global-text-color-light, #546773); overflow-wrap: anywhere; }
+.arxiv-digest .arxiv-badges { display: flex; flex-wrap: wrap; gap: .35em; }
+.arxiv-digest .arxiv-badge { display: inline-block; background: #eaf2f5; color: #304454; padding: .15em .55em; border-radius: 4px; font: 600 .72em/1.7 system-ui, sans-serif; }
+.arxiv-digest .arxiv-collaborators { background: #e6f3eb; color: #21583e; }
+.arxiv-digest .arxiv-notable_authors { background: #fff1d5; color: #6b4b12; }
+.arxiv-digest .arxiv-count { font-size: .65em; font-weight: 400; color: var(--global-text-color-light, #546773); }
+.arxiv-digest details { margin: .8em 0; }
+.arxiv-digest summary { cursor: pointer; color: var(--global-link-color, #006b82); font-weight: 600; }
+.arxiv-digest summary:focus-visible, .arxiv-digest a:focus-visible { outline: 3px solid var(--global-link-color, #006b82); outline-offset: 3px; }
+.arxiv-digest .arxiv-issue { border-bottom: 1px solid var(--digest-border); padding: .75em 0; }
+@media (max-width: 600px) { .arxiv-digest .arxiv-card { padding: .85em; } }

@@ -1,0 +1,40 @@
+{
+  "title": "Leif's Weekly arXiv digest",
+  "timezone": "Asia/Hong_Kong",
+  "categories": ["gr-qc", "astro-ph.HE", "astro-ph.GA", "astro-ph.CO", "hep-th"],
+  "topics": [
+    {"name": "Self-force", "keywords": ["self-force", "self force"]},
+    {"name": "Gravitational waves", "keywords": ["gravitational wave", "gravitational waves", "GW", "GWs"]},
+    {"name": "EMRIs", "keywords": ["EMRI", "EMRIs", "extreme mass ratio inspiral", "extreme mass ratio inspirals"]},
+    {"name": "Resonance", "keywords": ["resonance", "resonances", "resonant"]},
+    {"name": "Environmental effects", "keywords": ["environmental effect", "environmental effects", "astrophysical environment", "astrophysical environments"]},
+    {"name": "Gravitational lensing", "keywords": ["gravitational lensing", "gravitational lens", "gravitational lenses"]},
+    {"name": "Quasi-normal modes", "keywords": ["quasi-normal mode", "quasi-normal modes", "quasinormal mode", "quasinormal modes", "QNM", "QNMs"]},
+    {"name": "Black-hole perturbation theory", "keywords": ["black hole perturbation", "black hole perturbations", "blackhole perturbation"]},
+    {"name": "GRHD", "keywords": ["GRHD", "general relativistic hydrodynamics", "general relativistic hydrodynamic"]},
+    {"name": "GRMHD", "keywords": ["GRMHD", "general relativistic magnetohydrodynamics", "general relativistic magnetohydrodynamic"]},
+    {"name": "Tidal heating", "keywords": ["tidal heating"]},
+    {"name": "Tidal resonance", "keywords": ["tidal resonance", "tidal resonances", "tidal resonant"]},
+    {"name": "Teukolsky", "keywords": ["Teukolsky"]}
+  ],
+  "exclude_keywords": [],
+  "author_flags": {
+    "collaborators": [
+      "Alejandro Torres-Orjuela", "Lisa Drummond", "Xian Chen", "Vojtěch Witzany",
+      "Yang Yang", "Adrian Ka-Wai Chung", "Nicholas Yunes", "Dongjun Li",
+      "Kelvin Ka Ho Lam", "Pau Amaro-Seoane", "Bing Zhang"
+    ],
+    "notable_authors": [
+      "Maarten van de Meent", "Scott Hughes", "Vitor Cardoso", "Conor Dyson",
+      "João S. Santos", "Huan Yang", "Yanbei Chen", "Yucheng Yin", "Rico Ka-Lok Lo",
+      "Devin Becker", "Philip Lynch", "Loic Honet", "David Trestini", "Adam Pound",
+      "Leor Barack"
+    ]
+  },
+  "author_aliases": {
+    "Nicholas Yunes": ["Nicolás Yunes"],
+    "João S. Santos": ["João Sieiro dos Santos"]
+  },
+  "include_flagged_authors": true,
+  "max_papers": 20
+}

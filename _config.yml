@@ -183,6 +183,9 @@ exclude:
   - README
   - tmp
   - vendor
+  - scripts
+  - tests
+  - ARXIV_DIGEST_SETUP.md
 keep_files:
   - .git
   - .svn

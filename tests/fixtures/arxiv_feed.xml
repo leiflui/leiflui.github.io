@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">
+  <title>SYNTHETIC TEST DATA</title>
+  <opensearch:totalResults>4</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2610.00001v1</id>
+    <published>2026-10-19T10:00:00Z</published><updated>2026-10-19T10:00:00Z</updated>
+    <title>DEMO: Teukolsky waveforms for resonant EMRIs</title>
+    <summary>This fictional abstract demonstrates a keyword shortlist for gravitational self-force, tidal resonance and gravitational waves. It makes no scientific claim.</summary>
+    <author><name>Example Collaborator</name></author><author><name>Example Researcher</name></author>
+    <category term="gr-qc"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.00002v2</id>
+    <published>2026-08-10T08:00:00Z</published><updated>2026-10-17T08:00:00Z</updated>
+    <title>DEMO: Environmental effects on quasi-normal modes</title>
+    <summary>This fictional update illustrates how black-hole perturbation theory and GRMHD can appear in a digest. This is demonstration data, not an actual paper.</summary>
+    <author><name>Example Notable Author</name></author>
+    <category term="astro-ph.HE"/><category term="gr-qc"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.00003v1</id>
+    <published>2026-10-15T08:00:00Z</published><updated>2026-10-15T08:00:00Z</updated>
+    <title>DEMO: A paper without a selected topic</title>
+    <summary>This fictional example demonstrates inclusion through an explicitly flagged author's name without any configured topic phrase.</summary>
+    <author><name>Example Collaborator</name></author><category term="gr-qc"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.00004v1</id>
+    <published>2026-10-14T08:00:00Z</published><updated>2026-10-14T08:00:00Z</updated>
+    <title>DEMO: Unrelated laboratory equipment</title>
+    <summary>A fictional unrelated record that should not appear in the selected digest.</summary>
+    <author><name>Unrelated Example</name></author><category term="gr-qc"/>
+  </entry>
+</feed>

@@ -1,0 +1,70 @@
+name: Weekly arXiv digest and website
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+  schedule:
+    # Tuesday 08:17 Hong Kong time (UTC+8).
+    - cron: '17 0 * * 2'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      pages: read
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Check the digest generator
+        run: python -m unittest discover -s tests -p 'test_arxiv_digest.py' -v
+      - name: Collect the completed week's papers
+        if: github.event_name != 'push'
+        run: python scripts/arxiv_digest.py
+      - name: Archive the issue in the website repository
+        if: github.event_name != 'push'
+        run: |
+          git add _data/arxiv_digest.json _pages/arxiv-digest/ files/arxiv-digest/
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Publish weekly arXiv digest"
+            git push origin HEAD:master
+          fi
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Build the complete existing website
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Upload the website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./_site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
