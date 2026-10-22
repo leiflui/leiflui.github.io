@@ -13,4 +13,5 @@
 .arxiv-digest summary { cursor: pointer; color: var(--global-link-color, #006b82); font-weight: 600; }
 .arxiv-digest summary:focus-visible, .arxiv-digest a:focus-visible { outline: 3px solid var(--global-link-color, #006b82); outline-offset: 3px; }
 .arxiv-digest .arxiv-issue { border-bottom: 1px solid var(--digest-border); padding: .75em 0; }
+.arxiv-digest .arxiv-review { border-top: 1px solid var(--digest-border); margin-top: 1em; padding-top: .5em; }
 @media (max-width: 600px) { .arxiv-digest .arxiv-card { padding: .85em; } }

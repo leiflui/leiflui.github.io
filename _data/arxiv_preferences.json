@@ -37,5 +37,10 @@
     "João S. Santos": ["João Sieiro dos Santos"]
   },
   "include_flagged_authors": true,
+  "ai_review": {
+    "enabled": true,
+    "model": "nvidia/nemotron-3.5-super-vl:free",
+    "max_papers": 10
+  },
   "max_papers": 20
 }

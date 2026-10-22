@@ -4,6 +4,7 @@ import argparse
 from datetime import date, datetime, time as day_time, timedelta, timezone
 import html
 import json
+import os
 from pathlib import Path
 import re
 import sys
@@ -14,6 +15,11 @@ from urllib.parse import urlencode, urlsplit
 from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
 from zoneinfo import ZoneInfo
+
+if __package__:
+    from . import arxiv_reviews
+else:
+    import arxiv_reviews
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -53,6 +59,7 @@ def read_preferences(path):
     if type(data.get("max_papers")) is not int or not 1 <= data["max_papers"] <= 100:
         raise ValueError("max_papers must be between 1 and 100")
     ZoneInfo(data["timezone"])
+    arxiv_reviews.options(data)
     return data
 
 
@@ -217,13 +224,31 @@ def render_body(snapshot):
     last_day = (instant(end) - timedelta(days=1)).strftime("%d %b %Y")
     zone_label = "Hong Kong time" if snapshot.get("timezone", "Asia/Hong_Kong") == "Asia/Hong_Kong" else snapshot["timezone"]
     selected = snapshot["papers"][:snapshot["max_papers"]]
+    notice = ('AI reviews are preliminary assessments of extracted text, not peer review or an independent correctness check.'
+              if snapshot.get("ai_reviews", {}).get("completed") else
+              'This issue uses metadata matching; no full-paper scientific assessment is claimed.')
     lines = [f'<div class="arxiv-digest"><p class="arxiv-kicker">Weekly research watch</p>',
              f'<p>Coverage: <time>{first_day}</time>–<time>{last_day}</time> ({escaped(zone_label)}).</p>',
-             '<p class="arxiv-notice">Selection uses titles, abstracts and configured author flags. It is not a full-paper review or a scientific quality assessment.</p>']
+             f'<p class="arxiv-notice">Selection uses titles, abstracts and configured author flags. {notice}</p>']
     if snapshot["demo"]:
         lines.append('<p class="arxiv-notice"><strong>SYNTHETIC DEMO.</strong> Paper records are fictional examples, not research recommendations.</p>')
     counts = snapshot["coverage"]
     lines.append(f'<p>{len(snapshot["papers"])} matches from {counts["papers_in_window"]} unique papers in the window; {snapshot["excluded"]} excluded by keyword. Showing {len(selected)}. All matches are available in the JSON download.</p>')
+    reviews = snapshot.get("ai_reviews")
+    if reviews:
+        lines.append('<h2>AI paper reviews</h2>')
+        lines.append(f'<p>{reviews["completed"]} of {reviews["requested"]} shortlisted papers have an AI summary; {reviews["quality_assessed"]} have a scientific assessment. Rankings compare only these reviewed papers, not every match. Ties retain the keyword shortlist order.</p>')
+        if reviews["completed"]:
+            lines.append('<p>Relevance and scientific strength are scored separately from 1 to 5. Scientific strength is a preliminary AI judgement of the evidence in extracted text, not peer review or an independent correctness check. Figures are not visually inspected. Author reputation does not determine this score.</p>')
+            for field, heading in [("relevance_rank", "Ranked by relevance"), ("quality_rank", "Ranked by scientific strength")]:
+                ranked = sorted([p for p in selected if field in p.get("ai_review", {})],
+                                key=lambda p: p["ai_review"][field])
+                lines.append(f'<details><summary>{heading}</summary><ol>')
+                for paper in ranked:
+                    lines.append(f'<li><a href="#paper-{escaped(paper["id"])}">{escaped(paper["title"])}</a></li>')
+                lines.append('</ol></details>')
+        if reviews["completed"] < reviews["requested"]:
+            lines.append('<p>Some AI reviews are unavailable. Those papers retain their keyword matches and abstracts; no scientific score is inferred from missing text or service availability.</p>')
     for kind in ["New paper", "Updated paper"]:
         group = [paper for paper in selected if paper["kind"] == kind]
         lines.append(f'<h2>{"New papers" if kind == "New paper" else "Notable updates"} <span class="arxiv-count">{len(group)}</span></h2>')
@@ -232,7 +257,7 @@ def render_body(snapshot):
         for paper in group:
             heading = escaped(paper["title"]) if snapshot["demo"] else f'<a href="{escaped(paper["url"])}">{escaped(paper["title"])}</a>'
             links = '<p>Paper links are disabled in this synthetic demo.</p>' if snapshot["demo"] else f'<p><a href="{escaped(paper["url"])}">arXiv abstract</a> · <a href="{escaped(paper["pdf_url"])}">PDF at arXiv</a></p>'
-            lines.extend(['<article class="arxiv-card">', f'<h3>{heading}</h3>',
+            lines.extend(['<article class="arxiv-card">', f'<h3 id="paper-{escaped(paper["id"])}">{heading}</h3>',
                           '<p class="arxiv-authors">' + escaped(", ".join(paper["authors"])) + '</p>',
                           '<p class="arxiv-badges">'])
             for topic in paper["topics"]:
@@ -245,7 +270,22 @@ def render_body(snapshot):
                           f'<p><strong>Why included:</strong> {escaped(paper["match_reason"])}. '
                           + escaped("; ".join(paper["topics"])) + '</p>',
                           f'<details><summary>Read the author-provided abstract</summary><p>{escaped(paper["abstract"])}</p></details>',
-                          links, '</article>'])
+                          links])
+            review = paper.get("ai_review")
+            if review:
+                quality = "Not assessed" if review["quality_score"] is None else f'{review["quality_score"]}/5 · rank {review["quality_rank"]}'
+                source_link = escaped(review["source"]) if snapshot["demo"] else f'<a href="{escaped(review["source_url"])}">{escaped(review["source"])}</a>'
+                lines.extend(['<div class="arxiv-review">',
+                              '<h4>AI summary and assessment</h4>',
+                              f'<p>{escaped(review["summary"])}</p>',
+                              f'<p><strong>Relevance:</strong> {review["relevance_score"]}/5 · rank {review["relevance_rank"]}. {escaped(review["relevance_reason"])}</p>',
+                              f'<p><strong>Scientific strength:</strong> {escaped(quality)}. {escaped(review["quality_reason"])}</p>',
+                              f'<p><strong>Limitations:</strong> {escaped(review["limitations"])}</p>',
+                              f'<p class="arxiv-meta">Source: {source_link} · Confidence: {escaped(review["confidence"])} · Model: {escaped(review["model"])}</p>'])
+                if review["evidence_quote"]:
+                    lines.append(f'<details><summary>Evidence cited by the review</summary><blockquote>{escaped(review["evidence_quote"])}</blockquote><p>{escaped(review["evidence_location"])}</p></details>')
+                lines.append('</div>')
+            lines.append('</article>')
     lines.extend(['<h2>How this issue was selected</h2>',
                   '<p>Topics: ' + escaped("; ".join(snapshot["topics"])) + '.</p>',
                   '<p>Categories: ' + escaped(", ".join(counts["categories"])) + '.</p>',
@@ -330,6 +370,15 @@ def main():
         else:
             papers, coverage = collect(preferences, start, end)
         snapshot = make_snapshot(preferences, papers, coverage, start, end, now, args.demo)
+        if not args.demo:
+            cache_path = args.root / f'files/arxiv-digest/{snapshot["issue"]}.json'
+            try:
+                previous = json.loads(cache_path.read_text()) if cache_path.exists() else None
+            except (OSError, ValueError):
+                previous = None
+            arxiv_reviews.enrich(snapshot, preferences, os.environ.get("OPENROUTER_API_KEY"), previous)
+            if snapshot.get("ai_reviews"):
+                print("AI reviews: " + snapshot["ai_reviews"]["status"])
         result = preview(args.root, snapshot) if args.demo or args.preview else publish(args.root, snapshot)
         print(f"Digest ready: {result.resolve()} ({len(snapshot['papers'])} matches; {coverage['requests']} arXiv requests)")
         return 0

@@ -11,8 +11,8 @@ description: "A weekly research watch for gravitational physics and relativistic
 {% assign issues = site.data.arxiv_digest.issues | sort: 'date' | reverse %}
 <div class="arxiv-digest">
   <p class="arxiv-kicker">Gravitational physics · Relativistic astrophysics</p>
-  <p>A weekly reading shortlist drawn from arXiv titles and abstracts, with separate sections for new papers and updates.</p>
-  <p class="arxiv-notice">Papers are selected by topic keywords and author flags. Inclusion indicates relevance to my interests, not a full-paper review or a judgement of scientific quality.</p>
+  <p>A weekly reading shortlist with separate sections for new papers and updates, plus AI summaries and assessments when available.</p>
+  <p class="arxiv-notice">Papers are selected by topic keywords and author flags. AI reviews report relevance, scientific strength, source coverage and confidence separately. These preliminary assessments do not replace peer review.</p>
 
   {% if issues.size > 0 %}
     {% assign latest = issues.first %}

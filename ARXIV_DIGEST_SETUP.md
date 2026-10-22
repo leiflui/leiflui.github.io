@@ -11,11 +11,15 @@ Publishing uses your website's existing `master` branch.
 - New papers and updated papers in separate sections.
 - Distinct collaborator and notable-author badges, with optional author-only inclusion.
 - A weekly archive, links to arXiv and PDFs, and a JSON download of every match.
-- A Tuesday 08:17 Hong Kong schedule using arXiv's public API. No paid API keys are required.
+- A Tuesday 08:17 Hong Kong schedule using arXiv's public API.
+- Optional AI summaries and separate relevance and scientific-strength rankings for up to ten papers.
+- Cloud execution on GitHub while your Mac is off. AI reviews use an OpenRouter free model.
 
-This version matches titles and abstracts. It does not claim to read full papers, assess
-scientific quality, or reproduce Vojtěch's full critical-review process. You can download
-an issue's JSON and ask ChatGPT to review selected papers using your existing subscription.
+Discovery matches titles, abstracts and author flags. The optional AI stage retrieves readable
+paper text from arXiv HTML, or extracts PDF text, and produces a short summary, two scores,
+reasons, limitations and confidence. Scientific-strength scores are preliminary AI judgements,
+not peer review, proof of correctness or an independent verification of the calculations.
+Figures are not visually inspected. Abstract-only summaries receive no scientific-strength score.
 
 ## Step 1: select your existing website in GitHub Desktop
 
@@ -33,8 +37,9 @@ This folder already points to `leiflui/leiflui.github.io`; do not create another
 2. Wait for the push to finish. If there are no outgoing commits, the changes may already be pushed.
 3. Continue with the Pages settings below to enable automatic weekly publishing.
 
-No API secrets need to be added. The workflow uses GitHub's built-in token to archive issues
-and deploy your website. Pushing `master` builds the page; manual and scheduled runs also collect papers.
+The keyword digest needs no API secret. AI reviews need the free OpenRouter key described below.
+GitHub's built-in token archives issues and deploys the website. Pushing `master` builds the
+page; manual and scheduled runs also collect papers and attempt AI reviews.
 
 ## Step 3: select the GitHub Pages publishing source
 
@@ -46,7 +51,30 @@ This is a publishing-source change for your complete existing Jekyll website. Th
 workflow builds the whole site, including the new page. It deploys directly after weekly
 collection, because a commit made with GitHub's built-in token does not trigger another Pages build.
 
-## Step 4: make the first real issue
+## Step 4: enable free cloud AI reviews
+
+1. Create or sign in to a free account at `https://openrouter.ai`.
+2. Open `https://openrouter.ai/settings/keys` and create an API key for this digest.
+3. Keep the free plan. Buying credits or enabling automatic top-ups is not required.
+4. Open `https://github.com/leiflui/leiflui.github.io/settings/secrets/actions`.
+5. Click **New repository secret**. Use **OPENROUTER_API_KEY** as the name and the new key
+   as the secret value. Never put the key into a source file or paste it into a chat.
+6. Run the workflow as described in Step 5.
+
+Only public paper text and the configured research topics are sent to the hosted model.
+The workflow does not use your ChatGPT login and does not need your Mac to be running.
+It accepts only a catalogued `:free` model with zero listed prices, sets an explicit zero
+provider-price cap, and sends no paid fallback models or paid plugins.
+
+The current default is `nvidia/nemotron-3.5-super-vl:free`. Availability can change. A missing
+key, exhausted quota, unavailable model, unreadable full text or invalid model response leaves
+the keyword digest available. Free access is subject to OpenRouter's limits; its free plan
+currently lists 50 requests per day. This workflow attempts at most ten inference calls per run.
+
+Successful reviews are reused when rerunning the same issue with the same paper version,
+topic preferences, review prompt version and model. This avoids repeatedly using the free quota.
+
+## Step 5: generate and publish an issue
 
 1. Open `https://github.com/leiflui/leiflui.github.io/actions`.
 2. Select **Weekly arXiv digest and website**.
@@ -73,6 +101,17 @@ Edit `_data/arxiv_preferences.json` in GitHub Desktop or GitHub's file editor.
 - `include_flagged_authors`: `true` includes papers by a flagged author within the selected
   categories even if none of the topic keywords match. Set `false` to flag topic matches only.
 - `max_papers`: number of papers displayed, initially 20. Every match stays in the JSON download.
+- `ai_review.enabled`: enables the optional hosted review stage. Set `false` for metadata only.
+- `ai_review.model`: an explicit OpenRouter `:free` catalog entry. Paid models are rejected.
+- `ai_review.max_papers`: number of the keyword-selected papers to review, from 1 to 10.
+
+AI relevance and scientific strength are ranked independently within the successfully reviewed
+shortlist. Ties retain the original keyword shortlist order. Rankings do not cover every
+matching paper in the download. Author flags help discovery;
+author reputation is not used as evidence of scientific quality. The scientific-strength
+assessment considers the novelty supported by the text, technical depth, validation and
+limitations. A short evidence quote must appear verbatim in the supplied source text.
+This check verifies the quotation, not the model's interpretation of it.
 
 Your 11 collaborators and 20 notable authors are already configured. To add more names,
 edit those lists. For example:
@@ -104,10 +143,12 @@ issue immediately, or wait for Tuesday. Each issue keeps its matching results an
 
 ## Local checks and preview
 
-Python 3.12+ is sufficient; no Python packages or API accounts are needed.
+Python 3.12+ is sufficient for metadata discovery and the offline demo. PDF text extraction for
+AI reviews additionally uses the pinned `pypdf` dependency, installed automatically by the workflow.
 
 ```sh
-python3 -m unittest discover -s tests -p test_arxiv_digest.py -v
+python3 -m pip install -r scripts/arxiv-review-requirements.txt
+python3 -m unittest discover -s tests -p 'test_arxiv*.py' -v
 python3 scripts/arxiv_digest.py --demo
 python3 scripts/arxiv_digest.py --preview
 ```
@@ -132,6 +173,11 @@ original README. The standalone preview checks the digest layout without rebuild
   was found; a paper without a selected topic or author match is omitted.
 - If branch protection prevents the bot from archiving, the collection job fails and leaves the
   existing site intact. Adjust that rule for your repository or use a review-based publishing flow.
+- Reviews never silently truncate a paper to fit the model. Unsupported, oversized or poorly
+  extracted papers use an explicitly labelled abstract-only summary with no scientific score.
+- The AI stage uses a ten-minute scheduling budget; an in-flight request may finish later.
+  Partial success is reported, and unreviewed
+  papers keep their abstracts and keyword ranking. Service errors are not automatically retried.
 - The schedule runs only on `master`. Do not manually deploy the review branch.
 - GitHub Pages hosting and standard Actions runners for public repositories are covered by GitHub's
   free offering, subject to platform limits. No paid search or model calls are made by this workflow.
@@ -142,3 +188,5 @@ original README. The standalone preview checks the digest layout without rebuild
 - arXiv rate limits and reuse rules: https://info.arxiv.org/help/api/tou.html
 - GitHub Pages custom workflows: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
 - Inspiration: https://github.com/VojtechW/vojtechs-arxiv-digest
+- OpenRouter free models: https://openrouter.ai/docs/guides/routing/model-variants/free
+- Free-plan limits: https://openrouter.ai/pricing
