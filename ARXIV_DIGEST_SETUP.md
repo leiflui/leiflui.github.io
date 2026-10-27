@@ -63,7 +63,8 @@ The local review check is scheduled for **10:00 Asia/Hong_Kong each day**. It re
 weekly issue once and skips papers with unchanged validated reviews. Daily checks give another
 opportunity on a later day if your Mac is off. They do not guarantee a run immediately after
 you start your Mac. GitHub still collects the weekly metadata on Tuesdays at 08:17, even while
-your Mac is off.
+your Mac is off. If GitHub has not collected the current completed week, the local review
+check collects it before preparing summaries; a delayed GitHub schedule does not block reviews.
 
 The app's saved schedule is separate from this repository; copying these files does not create
 an automation. Find the local schedule named **Leif's weekly arXiv reviews** in Scheduled to
@@ -83,7 +84,9 @@ No new API secret is needed.
 
 1. Fetch the latest `master` without disturbing local changes. Stop and report conflicting
    changes or diverged history instead of resetting or force-pushing.
-2. Find the newest published issue and read `_data/arxiv_preferences.json`.
+2. Read `_data/arxiv_preferences.json` and find the latest completed Tuesday in Asia/Hong_Kong.
+   If its issue is missing, run `python scripts/arxiv_digest.py --week-ending YYYY-MM-DD`
+   locally before preparing reviews. Preserve existing reports if collection fails.
 3. Install `scripts/arxiv-review-requirements.txt`, then run
    `python scripts/review_arxiv.py prepare`. The manifest in
    `local/arxiv-review/ISSUE/manifest.json` lists only papers without a current review.
