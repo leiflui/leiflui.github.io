@@ -13,7 +13,7 @@ author_profile: true
     { journal: 'Phys. Rev. Lett.', count: 1 },
     { journal: 'Astrophys. J.', count: 1 },
     { journal: 'Phys. Rev. D', count: 1 },
-    { journal: 'J. High Energy Astrophys.: 1 },
+    { journal: 'J. High Energy Astrophys.', count: 1 },
     { journal: 'arXiv', count: 3 }
   ];
 
