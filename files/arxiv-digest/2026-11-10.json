@@ -2,7 +2,7 @@
   "title": "Leif's Weekly arXiv digest",
   "timezone": "Asia/Hong_Kong",
   "issue": "2026-11-10",
-  "generated_at": "2026-11-10T08:07:18.956956+08:00",
+  "generated_at": "2026-11-10T15:28:00.363136+08:00",
   "window_start": "2026-11-03T00:00:00+08:00",
   "window_end": "2026-11-10T00:00:00+08:00",
   "demo": false,
@@ -24,9 +24,9 @@
   "max_papers": 20,
   "excluded": 0,
   "coverage": {
-    "requests": 5,
-    "records_scanned": 1000,
-    "papers_in_window": 885,
+    "requests": 6,
+    "records_scanned": 1200,
+    "papers_in_window": 1138,
     "categories": [
       "gr-qc",
       "astro-ph.HE",
@@ -258,8 +258,8 @@
         "source_url": "https://arxiv.org/html/2611.06018v1",
         "fingerprint": "930045f67370af4fa3af151d24253f2a8c423515056b07e2644edcb8d8293a80",
         "generated_at": "2026-11-10T00:13:35.014462+00:00",
-        "relevance_rank": 8,
-        "quality_rank": 6
+        "relevance_rank": 6,
+        "quality_rank": 4
       }
     },
     {
@@ -316,6 +316,72 @@
       }
     },
     {
+      "id": "2611.11895",
+      "version": 1,
+      "title": "Quasinormal Modes of Black holes in the generalized Schwarzschild-de Sitter solution of $f(R)$ gravity",
+      "abstract": "We analyze scalar, vector, and {axial} tensor perturbations in a Schwarzschild-type static spherically symmetric solution of modified $f(R)$ gravity. This solution differs from the Schwarzschild metric of general relativity through the presence of a linearly growing term and a logarithmic correction, and it depends on four integration constants. Using the higher-order Wentzel-Kramers-Brillouin (WKB) approximation and an analytical method, we calculate the quasinormal modes (QNMs) for all three types of perturbations. Our results show that, for appropriately chosen parameter values, the QNMs closely match those of the Schwarzschild black hole. In particular, the model parameter $A$ produces a nonlinear increase in both the oscillation frequency and damping rate of ringdown gravitational waves. A similar effect arises for the parameter $η$ when $A$ is small, while for larger $A$ values the effects are opposite, where the scalar perturbations display a distinct deviation compared to the vector and {axial} tensor cases. Contour plots of QNMs in the parameter space support these findings. Finally, time-domain profiles are obtained to illustrate the dynamical evolution of the gravitational wave signal.",
+      "authors": [
+        "Dhruba Jyoti Gogoi",
+        "Himanshu Chaudhary",
+        "Tiberiu Harko"
+      ],
+      "published": "2026-11-09T05:16:12Z",
+      "updated": "2026-11-09T05:16:12Z",
+      "categories": [
+        "gr-qc",
+        "astro-ph.CO",
+        "hep-ph"
+      ],
+      "url": "https://arxiv.org/abs/2611.11895v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.11895v1",
+      "topics": [
+        "Gravitational waves",
+        "Quasi-normal modes"
+      ],
+      "title_topics": [
+        "Quasi-normal modes"
+      ],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 3,
+      "kind": "New paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2609.23428",
+      "version": 2,
+      "title": "Impact on time delays due to milli-lensing by subhalos on lensed gravitational waves",
+      "abstract": "Dark matter substructure properties such as their mass function and spatial distribution depend on the nature of dark matter and are strong tests of the cosmological model. Like luminous matter, these dark matter substructures cause gravitational lensing affecting observables such as time delays. Given the millisecond-level timing precision achievable with current and future gravitational-wave (GW) detectors, gravitationally lensed GWs provide a powerful probe of dark matter substructure, especially, at the lower end of the mass function. In contrast, the optical (or electromagnetic) observations can provide a precision of a few hours and are thus, not sensitive to deflections from the less massive subhalos. In this work, we investigate the impact of realistic population of DM subhalos ($10^6-10^9 M_\\odot$) on the lensing time delays for two of the typical strong lens configurations, a fold and a cusp, seen in quadruply lensed sources for a galaxy-scale lens. We find that the subhalos with NFW density profiles cause perturbations of the order of few hours to the lensing time delays between the macro-lensed images produced by the main lensing galaxy. These time delay \"anomalies\", if not accounted for, may affect the results of strong lens searches conducted on the GW data by the LIGO--Virgo--Kagra collaboration. Lastly, for the 200 realisations analysed per fold and cusp lens systems, we find that the NFW subhalos produced no additional images of their own called milli-images. Statistical studies are needed to better determine the expected impact on the lensed GW time delays and (non-)detection of milli-images.",
+      "authors": [
+        "Ishan Swamy",
+        "Anupreeta More",
+        "Ojas Patil"
+      ],
+      "published": "2026-09-20T07:47:57Z",
+      "updated": "2026-11-08T07:12:49Z",
+      "categories": [
+        "astro-ph.CO"
+      ],
+      "url": "https://arxiv.org/abs/2609.23428v2",
+      "pdf_url": "https://arxiv.org/pdf/2609.23428v2",
+      "topics": [
+        "Gravitational waves",
+        "Gravitational lensing"
+      ],
+      "title_topics": [
+        "Gravitational waves"
+      ],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 3,
+      "kind": "Updated paper",
+      "match_reason": "Topic match"
+    },
+    {
       "id": "2607.08884",
       "version": 2,
       "title": "Probing Rotating Einstein-Power-Yang-Mills Black Holes through Shadows and Quasinormal Modes: Prospects for Event Horizon Telescope Constraints",
@@ -362,8 +428,8 @@
         "source_url": "https://arxiv.org/html/2607.08884v2",
         "fingerprint": "31dbede1b9aaea6a42b28e73e81d88f9c1b5cda671f98875aafda2e3279428a3",
         "generated_at": "2026-11-10T00:13:35.016193+00:00",
-        "relevance_rank": 9,
-        "quality_rank": 7
+        "relevance_rank": 7,
+        "quality_rank": 5
       }
     },
     {
@@ -413,7 +479,7 @@
         "fingerprint": "86c5d5af61605cf6b4d83144bf60949de00bae9742e08cf6b15dfafc97f3c1c4",
         "generated_at": "2026-11-10T00:13:35.016771+00:00",
         "relevance_rank": 5,
-        "quality_rank": 8
+        "quality_rank": 6
       }
     },
     {
@@ -463,8 +529,8 @@
         "source_url": "https://arxiv.org/html/2611.08952v1",
         "fingerprint": "872fc78de5558a0ffa2e6b0cc92ae2f58bfc32fec3f2c6cbdfa8d2fb820c2d52",
         "generated_at": "2026-11-10T00:13:35.017449+00:00",
-        "relevance_rank": 10,
-        "quality_rank": 9
+        "relevance_rank": 8,
+        "quality_rank": 7
       }
     },
     {
@@ -495,25 +561,7 @@
       },
       "score": 3,
       "kind": "Updated paper",
-      "match_reason": "Topic match",
-      "ai_review": {
-        "summary": "This paper derives how a dynamical Chern–Simons pseudoscalar couples to axial gravitational and electromagnetic perturbations of a charged, nonrotating black hole. It tracks the resulting departure from the axial–polar spectral degeneracy of general relativity. Exterior-complex-scaled spectral calculations and shooting methods resolve different mode families, with independent baseline and convergence checks. Charge redistributes the coupling between gravitational-led and electromagnetic-led branches, and an exact degeneracy produces a square-root coupling dependence near resonance. Near extremality, selected zero-damping and photon-sphere branches respond differently. The contribution is a branch-resolved perturbative account of charge-dependent mixing and isospectrality breaking. Its predictions apply at leading coupling order in the studied background, with rotating charged configurations and static tidal response left open.",
-        "relevance_score": 5,
-        "relevance_reason": "Directly connects quasinormal modes, resonant coupled perturbations and modified-gravity black-hole spectroscopy.",
-        "quality_score": 4,
-        "quality_reason": "The inspected text reports field-equation reductions, an independent spectral baseline, shooting cross-checks and explicit convergence and extrapolation errors. Its table distinguishes exact relations, numerical results and asymptotic estimates.",
-        "limitations": "Selective reading: abstract, Introduction, Secs. XIII–XIV.1 and Sec. XV. Detailed derivations and appendices were not fully checked. Coupling expansions limit the predictions, near-degenerate overtone results are partly scaling estimates, and the background is nonrotating. Figures were not visually inspected; code was not run and derivations were not independently verified.",
-        "confidence": "low",
-        "evidence_location": "Sec. XIV.1, Method",
-        "evidence_quote": "an independent shooting integration of the full three-field system reproduces them",
-        "model": "ChatGPT/Codex (model not reported)",
-        "source": "HTML paper text",
-        "source_url": "https://arxiv.org/html/2610.38742v2",
-        "fingerprint": "de2a4797d90ceb79ed0880b746343801b78847ea928312eeaac78b37b80f34a8",
-        "generated_at": "2026-11-10T00:13:35.018468+00:00",
-        "relevance_rank": 6,
-        "quality_rank": 4
-      }
+      "match_reason": "Topic match"
     },
     {
       "id": "2509.02394",
@@ -549,25 +597,7 @@
       },
       "score": 3,
       "kind": "Updated paper",
-      "match_reason": "Topic match",
-      "ai_review": {
-        "summary": "This paper predicts eccentricity distributions for EMRIs formed through two-body relaxation in nuclear star clusters. It extends existing dynamical simulations toward plunge with FastEMRIWaveforms and weights trajectories by time-dependent formation rates from loss-cone modeling. The predicted distribution peaks near eccentricity 0.2, with a substantial high-eccentricity tail and up to twenty percent above 0.5 for some central masses. Wide-origin and cliffhanger EMRIs contribute to that tail. The study also identifies large regions of the predicted low-mass population outside the examined numerical flux grid. Its contribution connects formation dynamics to waveform-model coverage requirements. The predictions concern Schwarzschild primaries and one secondary mass, while the most eccentric trajectories depend on post-Newtonian evolution outside the relativistic grid.",
-        "relevance_score": 5,
-        "relevance_reason": "Directly relevant to astrophysical EMRIs, eccentric waveform coverage, relaxation-driven formation and environmental population modeling.",
-        "quality_score": 4,
-        "quality_reason": "The inspected method includes formation-rate weighting, comparisons of two integration parameterizations and explicit accounting for flux-grid limits. It clearly identifies approximations affecting the high-eccentricity tail.",
-        "limitations": "Selective reading: abstract, Introduction, portions of Secs. II.1–II.2 and IV, and Sec. V. Only Schwarzschild primaries and 10-solar-mass secondaries are modeled. Very eccentric tracks use PN5 where accuracy is less secure, with a different plunge stopping tolerance. Figures were not visually inspected; simulations were not rerun and derivations were not independently verified.",
-        "confidence": "low",
-        "evidence_location": "Sec. II.1, trajectory integration parameterizations",
-        "evidence_quote": "both methods give almost indistinguishable results at the precision level we require.",
-        "model": "ChatGPT/Codex (model not reported)",
-        "source": "HTML paper text",
-        "source_url": "https://arxiv.org/html/2509.02394v3",
-        "fingerprint": "dad7a3c79334501624ea4bd3ef4939933818f6ef8e032bf9546ad1a9943786f5",
-        "generated_at": "2026-11-10T00:13:35.019352+00:00",
-        "relevance_rank": 7,
-        "quality_rank": 5
-      }
+      "match_reason": "Topic match"
     },
     {
       "id": "2611.07596",
@@ -696,6 +726,496 @@
         "notable_authors": []
       },
       "score": 3,
+      "kind": "New paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2611.05201",
+      "version": 2,
+      "title": "Excitation factors and exceptional points of Kerr--Newman quasinormal modes",
+      "abstract": "We study excitation factors and investigate exceptional points (EPs) of Kerr--Newman quasinormal modes using the exact separated gravitoelectromagnetic equations. At fixed charge, the magnitudes of the excitation factors for the gravitational-led modes studied here decrease with increasing spin, whereas those for electromagnetic-led modes exhibit both monotonic and nonmonotonic behavior. The magnitude of the excitation factor for the first overtone can be comparable to or larger than that for the fundamental mode. We identify 42 EPs at which pairs of modes coalesce in the gravitational-led and electromagnetic-led sectors. Some EPs form sequences involving successive overtone pairs, with higher-overtone pairs coalescing progressively closer to the extremal limit. The additional EPs identified outside these sequences all share the same mode-pair labels as sequence members, but occur at different values of the black hole spin and charge. These findings clarify how rotation and charge shape the relative excitation strengths of different modes and the pattern of mode coalescence in the non-Hermitian spectrum of Kerr--Newman black holes.",
+      "authors": [
+        "Jun-Kun Zhao",
+        "Tieguang Zi"
+      ],
+      "published": "2026-11-03T16:51:16Z",
+      "updated": "2026-11-09T15:08:16Z",
+      "categories": [
+        "gr-qc"
+      ],
+      "url": "https://arxiv.org/abs/2611.05201v2",
+      "pdf_url": "https://arxiv.org/pdf/2611.05201v2",
+      "topics": [
+        "Quasi-normal modes"
+      ],
+      "title_topics": [
+        "Quasi-normal modes"
+      ],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 2,
+      "kind": "New paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2607.26124",
+      "version": 2,
+      "title": "Gravitational Waves from Multiple Cosmic Superstrings and the Overshoot Problem",
+      "abstract": "Post inflationary string cosmology can feature an initial population of multiple species of cosmic superstrings whose tension is controlled by a modulus rolling over a steep potential toward a late-time minimum. We perform a full analysis of the associated dynamical system, finding that overshooting the minimum is prevented by the friction of a radiation background of gravitational waves produced from the early decay of effective strings arising from NS5- and D3-branes wrapped around internal cycles. On the other hand, fundamental strings survive longer and decay when the modulus is oscillating around the minimum and they have about $1/3$ of the total energy density. The spectrum of gravitational waves generated by the decays of these multiple cosmic superstrings, even if diluted by a late epoch of modulus domination, can still result in a high-frequency, multi-peaked signal, offering an observational signature of generic features of string theory.",
+      "authors": [
+        "Luca Brunelli",
+        "Michele Cicoli",
+        "Muhammad Hassan",
+        "Seyed Ehsan Qoreishi",
+        "Francisco Gil Pedro"
+      ],
+      "published": "2026-07-28T18:00:00Z",
+      "updated": "2026-11-09T11:04:54Z",
+      "categories": [
+        "hep-th",
+        "astro-ph.CO",
+        "gr-qc",
+        "hep-ph"
+      ],
+      "url": "https://arxiv.org/abs/2607.26124v2",
+      "pdf_url": "https://arxiv.org/pdf/2607.26124v2",
+      "topics": [
+        "Gravitational waves"
+      ],
+      "title_topics": [
+        "Gravitational waves"
+      ],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 2,
+      "kind": "Updated paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2611.12179",
+      "version": 1,
+      "title": "Investigating the Viability of Dedicated Microhertz Gravitational Wave Pulsar Timing",
+      "abstract": "The microhertz gravitational wave (GW) frequency regime remains one of the least explored regions of the GW spectrum. This is due to the physical limitations of our current and upcoming GW observatories such as LIGO and LISA, which are tuned to dHz and mHz respectively. Proposed experiments targeting the $μ$Hz regime are ambitious, expensive and unlikely to be operational within the next 20 years. Pulsar Timing Arrays (PTAs), with their Galaxy-sized baselines, occupy the other end of the spectrum; the frequencies they are sensitive to are a function of the observing cadence and total dataset timespan. Existing PTA campaigns have cadences and timespans corresponding to the nanohertz regime, however the possibility exists that they can be 'pushed' to detect higher frequencies. This paper investigates the viability of a custom microhertz-sensitive PTA, observing a small number of millisecond pulsars with a daily cadence, over the course of 1 and 2 years respectively. We assume the use of both 100-m and 500-m class radio telescopes for these observations, and an idealised noise model with negligible systematics to determine the most optimistic detection threshold. We compute the sensitivity of our proposed high-cadence PTA configurations to power-law signals and individual GW sources. We find that a 500-m class telescope would likely be able to set new upper limits on individual sources and GW background signals in the $0.1-1~μ$Hz range; while a 100-m class telescope would, in the best case, only match that of the performance of the EPTA second data release in the same range. Finally we consider a possible $μ$Hz PTA consisting of SKA-Mid and DSA observing 24 pulsars; we find this performs on par with the 500-m class while using far less telescope time, presenting a more feasible solution to microhertz-GW pulsar timing.",
+      "authors": [
+        "C. F. Sheridan",
+        "E. F. Keane"
+      ],
+      "published": "2026-11-09T10:30:44Z",
+      "updated": "2026-11-09T10:30:44Z",
+      "categories": [
+        "astro-ph.CO",
+        "astro-ph.IM"
+      ],
+      "url": "https://arxiv.org/abs/2611.12179v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.12179v1",
+      "topics": [
+        "Gravitational waves"
+      ],
+      "title_topics": [
+        "Gravitational waves"
+      ],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 2,
+      "kind": "New paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2304.10435",
+      "version": 3,
+      "title": "Measuring the Hubble Constant Using Strongly Lensed Gravitational Wave Signals",
+      "abstract": "The measurement of the Hubble constant $H_0$ plays an important role in the study of cosmology. In this letter, we propose a new method to constrain the Hubble constant using the strongly lensed gravitational wave (GW) signals. By reparameterizing the waveform, we find that the lensed waveform is sensitive to the $H_0$. Assuming the scenario that no electromagnetic counterpart of the GW source can be identified, our method can still give meaningful constraints on the $H_0$ with the information of the lens redshift. We then apply Fisher information matrix and Markov Chain Monte Carlo to evaluate the potential of this method. For the space-based GW detector, TianQin, the $H_0$ can be constrained within a relative error of $\\sim$ 0.3-2\\%, using a single strongly lensed GW event. Precision varies according to different levels of electromagnetic information.",
+      "authors": [
+        "Shun-Jia Huang",
+        "Yi-Ming Hu",
+        "Xian Chen",
+        "Jian-dong Zhang",
+        "En-Kun Li",
+        "Zucheng Gao",
+        "Xin-Yi Lin"
+      ],
+      "published": "2023-04-20T16:26:58Z",
+      "updated": "2026-11-09T07:34:09Z",
+      "categories": [
+        "astro-ph.CO",
+        "gr-qc"
+      ],
+      "url": "https://arxiv.org/abs/2304.10435v3",
+      "pdf_url": "https://arxiv.org/pdf/2304.10435v3",
+      "topics": [
+        "Gravitational waves"
+      ],
+      "title_topics": [
+        "Gravitational waves"
+      ],
+      "author_flags": {
+        "collaborators": [
+          "Xian Chen"
+        ],
+        "notable_authors": []
+      },
+      "score": 2,
+      "kind": "Updated paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2611.11922",
+      "version": 1,
+      "title": "Deep-Learning-Assisted Bayesian Inference for Extreme-Mass-Ratio Inspirals",
+      "abstract": "Extreme-mass-ratio inspirals (EMRIs) pose a major challenge to Bayesian parameter inference because of their complex, highly multimodal likelihood surfaces. Locating narrow high-likelihood regions is particularly difficult without knowledge of the true source parameters, which is unavailable in real observations. We develop a deep-learning-assisted Bayesian inference framework that combines neural-network-guided parameter-space localization, particle swarm optimization, and Markov chain Monte Carlo (MCMC) sampling. Applied to simulated six-month EMRI signals, the framework recovers posterior distributions in close agreement with reference MCMC analyses initialized near the true parameter values, without requiring such knowledge for initialization. Once the neural network has been trained, the complete inference pipeline takes approximately 10 hours per signal.",
+      "authors": [
+        "Jian-Jun Song",
+        "Zhong-Wu Xia",
+        "Wen-Hong Ruan",
+        "Zu-Cheng Chen",
+        "Hongwei Yu",
+        "Puxun Wu"
+      ],
+      "published": "2026-11-09T05:49:14Z",
+      "updated": "2026-11-09T05:49:14Z",
+      "categories": [
+        "gr-qc",
+        "astro-ph.IM",
+        "stat.ML"
+      ],
+      "url": "https://arxiv.org/abs/2611.11922v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.11922v1",
+      "topics": [
+        "EMRIs"
+      ],
+      "title_topics": [
+        "EMRIs"
+      ],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 2,
+      "kind": "New paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2611.08642",
+      "version": 2,
+      "title": "Testing influence of tides on gravitational wave emission with SPH code PHANTOM",
+      "abstract": "In this article, we demonstrate how a Newtonian SPH (Smoothed Particle Hydrodynamics) code PHANTOM can be used to estimate the tidal contribution to gravitational wave (GW) waveforms. Using a binary neutron star (BNS) system with typical masses of 1.5 + 1.5 Msun as an example, we show --- by comparing our results with waveforms calibrated against full numerical General Relativity (GR) simulations --- that the tidal contribution to GWs can be reliably extracted using as few as about $10^4$ smoothed particles. Naturally, one must account for the difference in neutron star compactness between Newtonian gravity and GR. At separations greater than $\\sim 80$ km, the relative tidal contribution falls below the level of numerical noise inherent in SPH. However, at such distances, GW waveforms for point-like sources are sufficient for detection purposes. It is also crucial to perform a hydrostatic/hydrodynamic relaxation of the initial models; otherwise, the entire GW signal is lost in the numerical noise.",
+      "authors": [
+        "Marat Sh. Potashov",
+        "Sergei I. Blinnikov",
+        "Aleksandra V. Mishakina"
+      ],
+      "published": "2026-11-05T19:39:33Z",
+      "updated": "2026-11-09T04:29:09Z",
+      "categories": [
+        "astro-ph.HE",
+        "gr-qc"
+      ],
+      "url": "https://arxiv.org/abs/2611.08642v2",
+      "pdf_url": "https://arxiv.org/pdf/2611.08642v2",
+      "topics": [
+        "Gravitational waves"
+      ],
+      "title_topics": [
+        "Gravitational waves"
+      ],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 2,
+      "kind": "New paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2611.11584",
+      "version": 1,
+      "title": "Quasinormal modes of a scale-dependent black hole in 5D spacetime with cosmological constant",
+      "abstract": "In this paper, we investigate the quasinormal modes (QNMs) of a scale-dependent black hole in five dimensions with a positive cosmological constant, considering i) scalar, ii) electromagnetic, and iii) Dirac perturbations. After deriving exact analytical solutions within the framework of scale-dependent gravity in five dimensions and selecting a different family of solutions (cf. \\cite{Contreras:2019fwu}), we analyze the corresponding effective potentials (given by the lapse function) for each perturbation type. We employ a first-order approximation for the lapse function, as it closely matches the exact case for small $\\varepsilon$. Since quantum corrections are expected to be small, our focus is on a relatively low range of the scale-dependent parameter $\\varepsilon$. We confirm that the WKB semi-analytical approach can be used to compute the QNMs for these perturbations to the background geometry. We calculate the QNM frequencies for the classical case (for comparison) and for cases where the scale-dependent parameter $\\varepsilon$, which quantifies deviations from General Relativity, is non-zero. The results are summarized in a series of tables and figures. Finally, we find that, regardless of the perturbation type, the solutions are stable, as the imaginary part of each QNM frequency is negative.",
+      "authors": [
+        "Ángel Rincón",
+        "Zdeněk Stuchlík"
+      ],
+      "published": "2026-11-08T19:58:23Z",
+      "updated": "2026-11-08T19:58:23Z",
+      "categories": [
+        "gr-qc"
+      ],
+      "url": "https://arxiv.org/abs/2611.11584v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.11584v1",
+      "topics": [
+        "Quasi-normal modes"
+      ],
+      "title_topics": [
+        "Quasi-normal modes"
+      ],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 2,
+      "kind": "New paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2611.11380",
+      "version": 1,
+      "title": "Negative Dynamical Friction in Dark Matter Spikes around Rotating Black Holes",
+      "abstract": "Dark matter may affect extreme-mass-ratio inspirals (EMRIs) through orbital-energy exchange and a conservative metric response. Here we show that dark matter spikes around rotating massive black holes can drive negative dynamical friction, supplying orbital energy to secondary black holes on stable prograde circular orbits. The energy-gain region extends beyond the innermost stable circular orbit once the black-hole spin exceeds a model-dependent threshold. For an illustrative four-year inspiral with Milky Way--like halo parameters and mass ratio $q=10^{-5}$, the total dynamical-friction contribution produces a phase difference of order $10^2$ radians relative to vacuum. For the same system, the fixed-frequency environmental redshift correction is comparable in magnitude and opposite in sign to the first-order conservative self-force correction. Both environmental energy exchange and the conservative metric response are therefore essential to precision EMRI modeling.",
+      "authors": [
+        "Wei Xiong",
+        "Peng-Cheng Li",
+        "Bin Chen"
+      ],
+      "published": "2026-11-08T13:41:30Z",
+      "updated": "2026-11-08T13:41:30Z",
+      "categories": [
+        "gr-qc"
+      ],
+      "url": "https://arxiv.org/abs/2611.11380v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.11380v1",
+      "topics": [
+        "Self-force",
+        "EMRIs"
+      ],
+      "title_topics": [],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 2,
+      "kind": "New paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2611.11366",
+      "version": 1,
+      "title": "Exceptional Points in Scalar Quasinormal Modes of Rastall String-Fluid Black Holes",
+      "abstract": "In this paper, we study exceptional points (EPs) in scalar quasinormal modes(QNMs) of Rastall string-fluid black holes by adding a localized Pöschl--Teller perturbation to the scalar potential, with the bump position $a$ and amplitude $\\eb$ serving as independent controls. We solve the hyperboloidal problem with two-domain Chebyshev collocation and arbitrary-precision linear algebra, and use the complex discriminant, eigenvector coalescence, Jordan-chain residuals, square-root splitting and closed-loop mode exchange as complementary tests of defectiveness. For the regular $A=1$, $\\eR=-1$ branch, the two-parameter search locates a resolution-stable second-order EP from $N=24$ to $N=60$, while constrained semidiscrete evolution gives the Jordan response $(C+Dt)e^{\\iiω_{\\rm EP}t}$. For the logarithmic $A=2$ branch, defective points occur in each finite truncation but their coordinates do not converge, so we make no continuum claim for this branch.",
+      "authors": [
+        "Ming Zhang",
+        "Xiao-Mei Wang",
+        "Ya-Nan Wang",
+        "Miao Wang",
+        "Lei Zhang",
+        "Xufen Zhang",
+        "De-Cheng Zou"
+      ],
+      "published": "2026-11-08T13:17:15Z",
+      "updated": "2026-11-08T13:17:15Z",
+      "categories": [
+        "gr-qc"
+      ],
+      "url": "https://arxiv.org/abs/2611.11366v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.11366v1",
+      "topics": [
+        "Quasi-normal modes"
+      ],
+      "title_topics": [
+        "Quasi-normal modes"
+      ],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 2,
+      "kind": "New paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2611.11211",
+      "version": 1,
+      "title": "The first-order phase transitions and gravitational waves from an effective theory inspired by four-stack intersecting D6-brane models",
+      "abstract": "First-order phase transitions in the early Universe can generate stochastic gravitational-wave backgrounds in frequency bands targeted by proposed deci-Hz observatories. We study the gravitational-wave consequences of the right-handed gauge symmetry breaking $SU(2)_{R_1}\\times SU(2)_{R_2}\\to SU(2)_R$ in a Pati-Salam effective theory inspired by four-stack intersecting D6-brane models. The ultraviolet construction fixes the gauge structure and particle multiplicities, while the scalar masses and quartic couplings are treated as renormalized inputs below the supersymmetry-breaking scale. Using a one-loop finite-temperature potential with ring resummation, we follow a strongly supercooled transition at the few-TeV scale through nucleation, percolation, completion, and reheating. The leading-order friction diagnostic does not support a runaway wall, so sound waves dominate the gravitational-wave signal, with turbulence as a sub-leading contribution; the finite acoustic lifetime suppresses the peak. For the fast-wall reference case, the spectrum peaks at $f_{\\rm peak}=0.611$ Hz with $h^2Ω_{\\rm GW,peak}=1.232\\times10^{-11}$, in the deci-Hz band targeted by DECIGO and BBO. We present its dependence on the wall speed, renormalization scale, and thermal screening, together with a noise-only comparison for several proposed detector configurations.",
+      "authors": [
+        "Haotian Huangfu",
+        "Tianjun Li",
+        "Qi Sun",
+        "Rui Sun",
+        "Wenxing Zhang"
+      ],
+      "published": "2026-11-08T07:59:34Z",
+      "updated": "2026-11-08T07:59:34Z",
+      "categories": [
+        "hep-ph",
+        "astro-ph.CO",
+        "hep-th"
+      ],
+      "url": "https://arxiv.org/abs/2611.11211v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.11211v1",
+      "topics": [
+        "Gravitational waves"
+      ],
+      "title_topics": [
+        "Gravitational waves"
+      ],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 2,
+      "kind": "New paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2611.10998",
+      "version": 1,
+      "title": "Spectral function, OPE, and QNMs detect different singular points of black branes with unequal R-charges",
+      "abstract": "We consider black brane solutions in the STU model, with three R-charges labeled by the parameters $q_1,q_2,q_3$. For equal R-charges $q_1=q_2=q_3$, the solution becomes the Reissner-Nordström black brane. For unequal R-charges $q_1>q_2>q_3\\geq0$, there are three curvature singular points at $R\\equiv r^2=-q_i$. Only $R=-q_3$ is the physical singularity, and the other two lie beyond it. Their optical times $T_i$, the complex times of null rays from the boundary to these singular points and back, form a right triangle in the complex $T$-plane. We probe these singular points using three observables, all built from the retarded correlator of $T_{xy}$ at zero spatial momentum: spectral function, OPE coefficients, and QNMs. The exponentially small correction to the spectral function at large real frequency is dominated by $T_1$ and $T_2$, which have the smallest ${\\rm Im}\\,T_i$. The OPE convergence radius is determined by $T_1$, which has the smallest $|T_i|$. A line of QNMs lies along the direction of $1/T_2$, since $T_2$ has the smallest phase $\\arg T_i$. Furthermore, there is a second line of QNMs along the negative imaginary axis, which carries information about $T_3$ corresponding to the physical singularity. We derive these results from a WKB analysis and check them numerically. The three observables are therefore sensitive to different singular points of the geometry.",
+      "authors": [
+        "Hyunwoo Oh"
+      ],
+      "published": "2026-11-07T22:42:14Z",
+      "updated": "2026-11-07T22:42:14Z",
+      "categories": [
+        "hep-th"
+      ],
+      "url": "https://arxiv.org/abs/2611.10998v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.10998v1",
+      "topics": [
+        "Quasi-normal modes"
+      ],
+      "title_topics": [
+        "Quasi-normal modes"
+      ],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 2,
+      "kind": "New paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2610.20770",
+      "version": 2,
+      "title": "All Order Gravitational Wave Tails from Classical Soft Theorem for Subleading Post-Newtonian Expansion",
+      "abstract": "The low-frequency gravitational waveform emitted in a classical scattering process contains an infinite tower of late- and early-time tail terms of the form $u^{-r}(\\ln|u|)^{r-1}$, $r \\geq 1$. In the Newtonian limit, the coefficients of this entire tower have recently been shown to be universal, i.e. fixed by the asymptotic data of the scattering objects alone. At the retained order in the velocity expansion, these leading-logarithmic tails are determined to all orders in Newton's constant $G$. We extend this result to the first subleading order in the post-Newtonian expansion of the asymptotic states. We consider scattering of an arbitrary number of incoming and outgoing nonrelativistic objects interacting only through gravity at long range, and we derive the complete tower of tail terms at this order. The correction arises from the first subleading term in the retardation expansion and is determined by the asymptotic Newtonian trajectories of the massive particles. Its coefficients are again determined entirely by the asymptotic trajectories and are independent of the details of the interaction. For $2\\to2$ scattering, the leading-logarithmic series can be summed in closed form. Our results agree with a relativistic conjecture proposed in earlier work arXiv:2610.07134.",
+      "authors": [
+        "Debanjan Karan",
+        "Babli Khatun"
+      ],
+      "published": "2026-10-14T18:19:08Z",
+      "updated": "2026-11-07T18:20:05Z",
+      "categories": [
+        "hep-th",
+        "gr-qc"
+      ],
+      "url": "https://arxiv.org/abs/2610.20770v2",
+      "pdf_url": "https://arxiv.org/pdf/2610.20770v2",
+      "topics": [
+        "Gravitational waves"
+      ],
+      "title_topics": [
+        "Gravitational waves"
+      ],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 2,
+      "kind": "Updated paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2610.40354",
+      "version": 2,
+      "title": "Two-peak gravitational wave spectra from supercooled two-field phase transitions",
+      "abstract": "We study the gravitational wave (GW) spectrum generated by supercooled first-order phase transitions in two-field conformal models. We construct three representative toy models that capture the essential features of these models, derive analytical criteria for the existence of two-step transitions, and show how the two-field dynamics generate a genuine two-peak GW spectrum. We identify regions of parameter space in which two-peak GW spectra are observable at LISA and the Einstein Telescope. By way of illustration, we apply our analysis to a realistic conformal dark SU(3) model.",
+      "authors": [
+        "Daniel Araújo",
+        "João Gonçalves",
+        "Danny Marfatia"
+      ],
+      "published": "2026-10-29T16:09:23Z",
+      "updated": "2026-11-07T16:45:03Z",
+      "categories": [
+        "hep-ph",
+        "astro-ph.CO",
+        "gr-qc",
+        "hep-ex"
+      ],
+      "url": "https://arxiv.org/abs/2610.40354v2",
+      "pdf_url": "https://arxiv.org/pdf/2610.40354v2",
+      "topics": [
+        "Gravitational waves"
+      ],
+      "title_topics": [
+        "Gravitational waves"
+      ],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 2,
+      "kind": "Updated paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2610.33883",
+      "version": 3,
+      "title": "Massive Scalar Quasinormal Modes and Quasibound States of Charged Black Holes with Logarithmic corrections",
+      "abstract": "We study how long-range deformations in a black-hole metric affect the oscillation, trapping, and decay of a neutral, minimally coupled massive scalar field. We choose a logarithmic deformation of Reissner-Nordström (RN) sourced by nonlinear electrodynamics, arising as an exact solution of Einstein gravity. The same geometry also arises in a phenomenological perfect-fluid dark-matter model. We provide several exact completions of this geometry with finite Arnowitt-Deser-Misner (ADM) mass. Focusing on the original logarithmic geometry, we analyze both quasinormal modes (QNMs), which describe relaxation, and quasibound states (QBSs), which describe trapped modes with small horizon absorption. We first show that a small scalar mass moves the potential barrier outward, raises it, and reduces its curvature. First-order WKB then predicts weaker damping at every fixed finite multipole and overtone. We then compare several approaches, namely sixth-order WKB, global matching, a generalized Leaver method (adapted to the logarithmic geometry) and time-domain evolution. All methods yield consistent QNM estimates within their ranges of validity. Global matching and Leaver also agree closely for QBSs. Further analytic estimates with a reference trapped state show that a local Padé approximation gives a binding-energy error of about $0.04\\%$, while leading Gamow tunnelling underestimates damping by about $25\\%$. Across the sampled QBSs, increasing the scalar mass or nonlinear coupling strengthens binding but shortens the lifetime through greater horizon absorption. Finally, using an appropriate horizon regularization and a common complex radial contour, we demonstrate orthogonality of an independently computed QNM-QBS pair using a suitable relativistic bilinear framework.",
+      "authors": [
+        "Prosenjit Paul",
+        "Rickmoy Samanta"
+      ],
+      "published": "2026-10-24T19:51:00Z",
+      "updated": "2026-11-07T13:11:25Z",
+      "categories": [
+        "gr-qc",
+        "hep-th"
+      ],
+      "url": "https://arxiv.org/abs/2610.33883v3",
+      "pdf_url": "https://arxiv.org/pdf/2610.33883v3",
+      "topics": [
+        "Quasi-normal modes"
+      ],
+      "title_topics": [
+        "Quasi-normal modes"
+      ],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 2,
+      "kind": "Updated paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2611.10133",
+      "version": 1,
+      "title": "Scalable early warning for binary neutron-star mergers in third-generation gravitational-wave detectors",
+      "abstract": "Third-generation gravitational-wave observatories will observe binary neutron-star coalescences for hours before merger. Over these extended time windows, Earth's motion and the long signal durations make standard search methods computationally demanding for low-latency detection. We propose an approach based on short-time Fourier transforms and convolutional neural networks that implicitly marginalizes over extrinsic parameters, effectively reducing the search to the chirp mass. The network learns the signals' nonlinear time-frequency morphology, approximating the optimal Bayesian detection statistic. Using a large-scale campaign of simulated signal injections, we compare the network's performance with a GPU-optimized matched-filtering baseline for both the ET$Δ$ and ET2L configurations of the Einstein Telescope and signal durations from approximately 25 minutes ($f_{\\rm min} = 5$ Hz) to approximately 6 hours ($f_{\\rm min} = 2$ Hz). The network achieves comparable detection sensitivity while reducing computational costs by over four orders of magnitude, bringing processing times from minutes to milliseconds. This efficiency paves the way for rapid early-warning alerts for multi-messenger astronomy in the third-generation detector era.",
+      "authors": [
+        "Martin Gerini",
+        "Rodrigo Tenorio",
+        "Davide Gerosa"
+      ],
+      "published": "2026-11-06T19:01:22Z",
+      "updated": "2026-11-06T19:01:22Z",
+      "categories": [
+        "gr-qc",
+        "astro-ph.HE"
+      ],
+      "url": "https://arxiv.org/abs/2611.10133v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.10133v1",
+      "topics": [
+        "Gravitational waves"
+      ],
+      "title_topics": [
+        "Gravitational waves"
+      ],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 2,
       "kind": "New paper",
       "match_reason": "Topic match"
     },
@@ -995,38 +1515,6 @@
       },
       "score": 2,
       "kind": "Updated paper",
-      "match_reason": "Topic match"
-    },
-    {
-      "id": "2611.08642",
-      "version": 1,
-      "title": "Testing influence of tides on gravitational wave emission with SPH code PHANTOM",
-      "abstract": "In this article, we demonstrate how a Newtonian SPH (Smoothed Particle Hydrodynamics) code PHANTOM can be used to estimate the tidal contribution to gravitational wave (GW) waveforms. Using a binary neutron star (NS+NS) system with typical masses of 1.5 + 1.5 Msun as an example, we show - by comparing our results with waveforms calibrated against full numerical General Relativity (GR) simulations - that the tidal contribution to GWs can be reliably extracted using as few as about 10$^4$ smoothed particles. Naturally, one must account for the difference in neutron star compactness between Newtonian gravity and general relativity. At separations greater than 100 km, the relative tidal contribution falls below the level of numerical noise inherent in SPH; however, at such distances, GW waveforms for point-like sources are sufficient for detection purposes. For a white dwarf-neutron star (WD+NS) binary with typical masses of 0.6 Msun and 1.5 Msun respectively, a much larger number of smoothed particles is required, along with a separation on the order of tens of thousands of kilometers, as tidal mass transfer and the disruption of the white dwarf begin quite rapidly. Nevertheless, these challenges can be overcome, but the approach is not capable of yielding useful results due to the richness of Newtonian effects. In all cases, it is crucial to perform a hydrostatic/hydrodynamic relaxation (HPR) of the initial models; otherwise, the entire GW signal is lost in the numerical noise.",
-      "authors": [
-        "Marat Sh. Potashov",
-        "Sergei I. Blinnikov",
-        "Aleksandra V. Mishakina"
-      ],
-      "published": "2026-11-05T19:39:33Z",
-      "updated": "2026-11-05T19:39:33Z",
-      "categories": [
-        "astro-ph.HE",
-        "gr-qc"
-      ],
-      "url": "https://arxiv.org/abs/2611.08642v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.08642v1",
-      "topics": [
-        "Gravitational waves"
-      ],
-      "title_topics": [
-        "Gravitational waves"
-      ],
-      "author_flags": {
-        "collaborators": [],
-        "notable_authors": []
-      },
-      "score": 2,
-      "kind": "New paper",
       "match_reason": "Topic match"
     },
     {
@@ -2326,36 +2814,6 @@
       "match_reason": "Topic match"
     },
     {
-      "id": "2611.05201",
-      "version": 1,
-      "title": "Excitation factors and exceptional points of Kerr--Newman quasinormal modes",
-      "abstract": "We study excitation factors and investigate exceptional points (EPs) of Kerr--Newman quasinormal modes using the exact separated gravitoelectromagnetic equations. At fixed charge, the magnitudes of the excitation factors for the gravitational-led modes studied here decrease with increasing spin, whereas those for electromagnetic-led modes exhibit both monotonic and nonmonotonic behavior. The magnitude of the excitation factor for the first overtone can be comparable to or larger than that for the fundamental mode. We identify 42 EPs at which pairs of modes coalesce in the gravitational-led and electromagnetic-led sectors. Some EPs form sequences involving successive overtone pairs, with higher-overtone pairs coalescing progressively closer to the extremal limit. The additional EPs identified outside these sequences all share the same mode-pair labels as sequence members, but occur at different values of the black hole spin and charge. These findings clarify how rotation and charge shape the relative excitation strengths of different modes and the pattern of mode coalescence in the non-Hermitian spectrum of Kerr--Newman black holes.",
-      "authors": [
-        "Jun-Kun Zhao",
-        "Tieguang Zi"
-      ],
-      "published": "2026-11-03T16:51:16Z",
-      "updated": "2026-11-03T16:51:16Z",
-      "categories": [
-        "gr-qc"
-      ],
-      "url": "https://arxiv.org/abs/2611.05201v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.05201v1",
-      "topics": [
-        "Quasi-normal modes"
-      ],
-      "title_topics": [
-        "Quasi-normal modes"
-      ],
-      "author_flags": {
-        "collaborators": [],
-        "notable_authors": []
-      },
-      "score": 2,
-      "kind": "New paper",
-      "match_reason": "Topic match"
-    },
-    {
       "id": "2611.05152",
       "version": 1,
       "title": "Gravitational-wave lensing beyond the diffraction integral: proper-time methods and the bound lens",
@@ -2949,6 +3407,584 @@
       "match_reason": "Topic match"
     },
     {
+      "id": "2503.19660",
+      "version": 4,
+      "title": "Effect of ultralight dark matter on compact binary mergers",
+      "abstract": "The growing catalogue of gravitational wave events enables a statistical analysis of compact binary mergers, typically quantified by the binary merger rate density. This quantity can be influenced by ambient factors, following which, in this work we have investigated the impact of dark matter environment on the merger statistics. We construct a baseline astrophysical model of eccentric and quasi-circular compact binary mergers and extend it by incorporating a model of ultra light dark matter, which affects the orbital evolution of binaries through accretion and dynamical friction. Our analysis of the merged population of binary progenitors demonstrates that, compared to the baseline model, ULDM can potentially alter the merger statistics for ambient non-zero densities, with the best agreement with GWTC-3 obtained for $ρ_0\\sim10^6$ GeV/cm$^3$ and eccentricity $\\sim0.5$. A comparison with the gravitational wave data from the GWTC-3 catalogue provides crucial insight into potential observational signatures of the ULDM in merger events, leading to possible constraints on the existence and density of dark matter distribution in galaxies.",
+      "authors": [
+        "Kabir Chakravarti",
+        "Soham Acharya",
+        "Sumanta Chakraborty",
+        "Sudipta Sarkar"
+      ],
+      "published": "2025-03-25T13:47:54Z",
+      "updated": "2026-11-09T15:36:07Z",
+      "categories": [
+        "gr-qc",
+        "astro-ph.GA",
+        "hep-th"
+      ],
+      "url": "https://arxiv.org/abs/2503.19660v4",
+      "pdf_url": "https://arxiv.org/pdf/2503.19660v4",
+      "topics": [
+        "Gravitational waves"
+      ],
+      "title_topics": [],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 1,
+      "kind": "Updated paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2611.12363",
+      "version": 1,
+      "title": "Naturalness in the Past from a Time-Dependent Supersymmetry Scale",
+      "abstract": "We consider the possibility that electroweak naturalness may be epoch dependent. In no-scale supergravity, a rolling quintessence modulus can control the supersymmetry-breaking scale, allowing superpartners to be much lighter in the early universe while remaining heavy today. Fifth-force and varying-constant effects can be suppressed via correlated modular weights in the visible-sector Kähler metric and modulus-dependent superpotential Yukawa couplings, while radiative stability of the quintessence potential requires additional tuning of the field-dependent vacuum energy. The resulting effective theory has distinctive implications for early-universe phase transitions, relic abundances, and gravitational waves.",
+      "authors": [
+        "Tony Gherghetta",
+        "Kunio Kaneta",
+        "Wenqi Ke"
+      ],
+      "published": "2026-11-09T13:11:02Z",
+      "updated": "2026-11-09T13:11:02Z",
+      "categories": [
+        "hep-ph",
+        "astro-ph.CO",
+        "hep-th"
+      ],
+      "url": "https://arxiv.org/abs/2611.12363v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.12363v1",
+      "topics": [
+        "Gravitational waves"
+      ],
+      "title_topics": [],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 1,
+      "kind": "New paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2611.12284",
+      "version": 1,
+      "title": "A Comprehensive Analysis of the H$α$ Luminosity Functions at $z\\sim 1.3$ and $z\\sim 2.0$ in the CANUCS Lensing Fields with JWST NIRISS",
+      "abstract": "We present H$α$ luminosity function (LF) measurements at redshifts $z\\sim1.3$ and $z\\sim2.0$. We adopt JWST grism data in five lensing cluster fields and their parallel fields from the CANUCS program: ABELL-370, MACS-J0416, MACS-J0417, MACS-J1149, MACS-J1423. Based on emission lines spectroscopically identified in the F115W, F150W and F200W filters, our final sample consists of 762 H$α$ emitters, including 433 at $1.1<z<1.5$ and 329 at $1.8<z<2.2$. Through detailed effective volume and completeness analysis for each source, we construct the H$α$ LF in two redshift bins. Thanks to the sensitivity of NIRISS WFSS and gravitational lensing magnification, our sample reaches intrinsic H$α$ luminosities down to $L_{\\rm Hα}\\sim10^{40.6}~\\rm erg~s^{-1}$ at $z\\sim1.3$ and $L_{\\rm Hα}\\sim10^{41}~\\rm erg~s^{-1}$ at $z\\sim2.0$ with completeness larger than 80\\%. The larger survey volume and coverage of multiple independent sightlines help mitigate cosmic variance. After accounting for cosmic variance, we constrain the faint-end slopes to be $α_{\\mathrm{H}α}=-1.51^{+0.06}_{-0.04}$ at $z\\sim1.3$ and $-1.42^{+0.09}_{-0.06}$ at $z\\sim2.0$, indicating a mild evolution between the two redshift bins. We find a negligible contribution from bright active galactic nuclei in our sample. We estimate integrated cosmic star formation rate densities of $0.103^{+0.008}_{-0.007}~M_{\\odot}~\\rm yr^{-1}~Mpc^{-3}$ at $z\\sim1.3$ and $0.149^{+0.016}_{-0.013}~M_{\\odot}~\\rm yr^{-1}~Mpc^{-3}$ at $z\\sim2.0$. The emission-line samples presented here will enable further detailed studies of galaxy properties including metallicities. The methodology presented here can be readily applicable to other JWST slitless spectroscopic datasets and future wide-field slitless surveys, including those from Euclid, Roman, and the Chinese Space Station Telescope.",
+      "authors": [
+        "Qianqiao Zhou",
+        "Yuxuan Pang",
+        "Xin Wang",
+        "Karl Glazebrook",
+        "Shengzhe Wang",
+        "Hang Zhou",
+        "Pengfei Ren",
+        "Shamuhawu Hailanhazi",
+        "Peter J. Watson",
+        "Maruša Bradač",
+        "Nicha Leethochawalit",
+        "Matthew A. Malkan",
+        "Themiya Nanayakkara",
+        "Xue-Bing Wu",
+        "Hu Zhan"
+      ],
+      "published": "2026-11-09T12:11:18Z",
+      "updated": "2026-11-09T12:11:18Z",
+      "categories": [
+        "astro-ph.GA"
+      ],
+      "url": "https://arxiv.org/abs/2611.12284v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.12284v1",
+      "topics": [
+        "Gravitational lensing"
+      ],
+      "title_topics": [],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 1,
+      "kind": "New paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2605.12593",
+      "version": 2,
+      "title": "How much dark matter really matters?",
+      "abstract": "Strong gravitational lensing is a key probe to trace dark matter. It assumes that mass curves spacetime so that light from a background source is deflected on its way to the observer. If dark matter contributes the major part to a massive cosmic structure, reconstructing the latter from strong-lensing observables allows us to infer characteristics of dark matter. Standard reconstructions fit a pre-defined mass-density model to the data. In this essay, I show how these mass models over-estimate the dark-matter contents of light-deflecting masses. Eliminating these models from the reconstruction reveals that observations directly constrain local properties of light-deflecting masses. How much dark matter is really needed in strong-gravitational-lensing effects and how much do we make up by our model choices?",
+      "authors": [
+        "Jenny Wagner"
+      ],
+      "published": "2026-05-12T18:00:01Z",
+      "updated": "2026-11-09T09:46:13Z",
+      "categories": [
+        "gr-qc",
+        "astro-ph.CO"
+      ],
+      "url": "https://arxiv.org/abs/2605.12593v2",
+      "pdf_url": "https://arxiv.org/pdf/2605.12593v2",
+      "topics": [
+        "Gravitational lensing"
+      ],
+      "title_topics": [],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 1,
+      "kind": "Updated paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2611.12093",
+      "version": 1,
+      "title": "Next-to-next-to-leading gravitational radiation-reaction corrections to quasi-elliptic and quasi-hyperbolic compact binary orbits",
+      "abstract": "We apply the Lagrange method of variation of constants to compute the radiation-reaction (RR) corrections to the quasi-elliptic and quasi-hyperbolic motion of compact binary systems at 4.5PN order, i.e., at next-to-next-to-leading order in the RR. We rely on the recent determination of the 4.5PN RR acceleration, in a general frame and in the center-of-mass frame, in harmonic coordinates. The non-local effects, due to the tails at 4PN order and to the gravitational-wave recoil at 4.5PN order, are carefully evaluated. Although the calculation is implemented differently in the quasi-elliptic and quasi-hyperbolic cases (different perturbation equations and choices of orbital parameters), we verify by analytic continuation that the results for the local effects are equivalent in the two cases.",
+      "authors": [
+        "Donato Bini",
+        "Luc Blanchet",
+        "Guillaume Faye",
+        "Andrea Geralico",
+        "Quentin Henry",
+        "Sara Rufrano Aliberti",
+        "Emeric Seraille"
+      ],
+      "published": "2026-11-09T09:12:51Z",
+      "updated": "2026-11-09T09:12:51Z",
+      "categories": [
+        "gr-qc"
+      ],
+      "url": "https://arxiv.org/abs/2611.12093v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.12093v1",
+      "topics": [
+        "Gravitational waves"
+      ],
+      "title_topics": [],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 1,
+      "kind": "New paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2610.26218",
+      "version": 3,
+      "title": "Boundary preparation of strong Mpemba states in holography",
+      "abstract": "We study the boundary preparation of strong Mpemba states in a probe Abelian Higgs model on a fixed AdS black brane. Different drives ending at the same charge density can prepare states with different slow mode amplitudes. Two pulses cancel the slowest mode at linear order, but charge exchange during preparation and radial Maxwell feedback regenerate a slow tail at cubic order. We derive the complete cubic response from the lower order field equations, including feedback after source removal, and use it to predict a compensating pulse. Full nonlinear evolution confirms that the compensation reduces the residual slow amplitude from third to fifth order in the source strength. For a representative protocol, the slow amplitude is reduced by a factor of about 600 relative to linear cancellation. This extends the fast relaxation window without changing the final quasinormal mode spectrum. Further nonlinear tuning suppresses the estimated residual amplitude to the level of numerical resolution. The prepared states can overtake a weakly driven reference despite having a larger excess free energy at source removal. Three pulses also suppress a second slow channel over the resolved time window and reveal interference between faster modes. Starting from a common initial state, controls with zero net charge transfer reach a given relaxation threshold sooner than passive relaxation, even when the full control duration is included.",
+      "authors": [
+        "Yu Shi",
+        "Xinwu Liu",
+        "Liping Li",
+        "Chikun Ding",
+        "Yuebing Zhou",
+        "Changqing Liu",
+        "Sheng Long"
+      ],
+      "published": "2026-10-19T11:45:20Z",
+      "updated": "2026-11-09T05:48:39Z",
+      "categories": [
+        "hep-th"
+      ],
+      "url": "https://arxiv.org/abs/2610.26218v3",
+      "pdf_url": "https://arxiv.org/pdf/2610.26218v3",
+      "topics": [
+        "Quasi-normal modes"
+      ],
+      "title_topics": [],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 1,
+      "kind": "Updated paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2611.11595",
+      "version": 1,
+      "title": "A geometrical approach for obtaining exact analytical solutions for a scalar field in a one-dimensional dynamical cavity",
+      "abstract": "The dynamical Casimir effect was first predicted by G. T. Moore in 1969, who considered a real scalar field inside a cavity with a moving mirror in ($1+1$)D, satisfying Dirichlet boundary conditions. Moore wrote the general solution for the field in terms of a function that satisfies a functional equation nowadays known as the Moore equation.In the literature, exact analytical solutions to the Moore equation form a rather small set, restricted to specific classes of laws of motion. Cole and Schieve (1995) developed a geometrical approach that yielded a general formula for the solution of the Moore equation for cavities initially at rest. However, its application has always been done through numerical calculations, and their approach has therefore long been regarded solely as a numerical method. In this work, we show that their method can also be employed as a powerful method for deriving exact analytical solutions, and show the applicability of this approach to deriving analytical solutions to the Moore equation. We obtain original exact analytical solutions for an expanding cavity with a uniformly moving mirror, a contracting cavity with a mirror that approaches the static one asymptotically, and, in addition, we recover the first analytical solution to the Moore equation for a resonant mirror motion, originally obtained by Law in 1994. Moreover, we extend the Cole-Schieve approach, showing that exact solutions can be constructed from any spacetime region where the Moore function has already been determined. We show that this extended geometrical approach allows us to expand the set of known analytical solutions to the Moore equation from the few classes of motion reported in the literature to an infinite set, as it enables the treatment of new classes of laws of motion obtained by combining those presented here with each other as well as with previously known classes of trajectories.",
+      "authors": [
+        "Maxwell F. de Araújo",
+        "Odemar Julião do N. Neto",
+        "Stanley S. Coelho",
+        "Jeferson Danilo L. Silva",
+        "Alessandra N. Braga",
+        "Danilo T. Alves"
+      ],
+      "published": "2026-11-08T20:20:29Z",
+      "updated": "2026-11-08T20:20:29Z",
+      "categories": [
+        "quant-ph",
+        "hep-th",
+        "math-ph"
+      ],
+      "url": "https://arxiv.org/abs/2611.11595v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.11595v1",
+      "topics": [
+        "Resonance"
+      ],
+      "title_topics": [],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 1,
+      "kind": "New paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2611.11449",
+      "version": 1,
+      "title": "Pushing the accuracy of the quasi-circular baseline for the SEOBNR family of models",
+      "abstract": "Gravitational-wave observations have opened a new era of astronomy, with accurate modeling of binary black hole signals becoming increasingly important for source characterization and astrophysical inference as detector sensitivities improve. We present SEOBNRv5iHM, an updated quasi-circular, aligned-spin inspiral-merger-ringdown gravitational-waveform model with higher-order modes, constructed within the effective-one-body formalism and building upon SEOBNRv5HM. The improvements mainly concern the late inspiral and the merger-ringdown: we remove the non-quasi-circular corrections used in previous models and instead introduce a phenomenological intermediate region between the inspiral and the ringdown, which allows the ringdown attachment time to be chosen independently for each mode, including at the peak of the mode's amplitude. The model is calibrated and validated against 591 quasi-circular aligned-spin waveforms from the third Simulating eXtreme Spacetimes catalog. For the $(2,2)$ mode, when considering the maximum unfaithfulness against numerical relativity over a total mass range of 10-300$M_\\odot$, SEOBNRv5iHM achieves a median of $4.25\\times10^{-5}$, a factor of 4.5 below SEOBNRv5HM, and a factor of 3-8 below other semi-analytical models, with $84\\%$ of cases below $10^{-4}$. For $M\\ge150 M_\\odot$, the median drops to $9.7\\times10^{-6}$, comparable to the numerical-relativity surrogate NRHybSur3dq8. For polarization mismatches at inclination $π/3$, with modes up to $\\ell_\\mathrm{max} = 5$, the median maximum unfaithfulness is $4.2\\times10^{-4}$, a factor of 2.6 below SEOBNRv5HM, 1.9 below IMRPhenomTHM, and 6-11 below the other semi-analytical models. Since spin-precessing and eccentric models are built on top of the quasi-circular, aligned-spin baseline, these improvements will make future SEOBNR models more accurate, reducing waveform systematics in upcoming analyses.",
+      "authors": [
+        "Cheng Foo",
+        "Alessandra Buonanno",
+        "Héctor Estellés",
+        "Lorenzo Pompili"
+      ],
+      "published": "2026-11-08T15:21:43Z",
+      "updated": "2026-11-08T15:21:43Z",
+      "categories": [
+        "gr-qc",
+        "astro-ph.HE"
+      ],
+      "url": "https://arxiv.org/abs/2611.11449v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.11449v1",
+      "topics": [
+        "Gravitational waves"
+      ],
+      "title_topics": [],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 1,
+      "kind": "New paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2611.11367",
+      "version": 1,
+      "title": "Probing Exotic Electron-Electron Interactions via Adiabatic Spin Inversion in MRFM",
+      "abstract": "Light bosons beyond the Standard Model can mediate exotic spin-dependent interactions between electrons, motivating sensitive searches at short distances. We propose a magnetic resonance force microscopy (MRFM) scheme that exploits oscillating-cantilever-driven adiabatic reversals (OSCAR) of electron spins to convert these interactions into measurable mechanical signals. The ferromagnetic tip serves as both a dense polarized-spin source and a source of magnetic-field gradients, enabling force detection without magnetic shielding between the source and sensor. Within a linearized treatment of the coupled spin-mechanical dynamics, we derive resonance-frequency shifts associated with the $V_2$ and $V_3$ interactions and a second-harmonic force signal arising from the velocity-dependent $V_8$ interaction. We further investigate interrupted-OSCAR differential detection and distance-dependent measurements to discriminate exotic signals from conventional magnetic backgrounds. Using representative parameters from ensemble and single-spin MRFM experiments, we estimate the projected sensitivity under specified noise and statistical assumptions. The results suggest that the proposed scheme could provide complementary sensitivity to short-range spin-dependent interactions, with the potential to improve existing constraints on $V_2$ over selected submicrometer interaction ranges. Our study establishes adiabatic spin-inversion MRFM as a promising approach to probing exotic electron-electron forces.",
+      "authors": [
+        "Chunlong Li",
+        "Shien Yang",
+        "Yiwei Huang",
+        "Yu Zhang",
+        "Fei Xue"
+      ],
+      "published": "2026-11-08T13:17:24Z",
+      "updated": "2026-11-08T13:17:24Z",
+      "categories": [
+        "hep-ph",
+        "astro-ph.CO",
+        "hep-ex",
+        "physics.ins-det"
+      ],
+      "url": "https://arxiv.org/abs/2611.11367v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.11367v1",
+      "topics": [
+        "Resonance"
+      ],
+      "title_topics": [],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 1,
+      "kind": "New paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2611.11323",
+      "version": 1,
+      "title": "Stanley Deser 19th March 1931 - 21st April 2023",
+      "abstract": "Stanley Deser was Ancell Professor Emeritus at Brandeis University and Visiting Professor at the California Institute of Technology. He was a world-renowned theoretical physicist whose accomplishments include the Arnowitt-Deser-Misner (ADM) formulation of general relativity, supergravity with Zumino, the dynamics of flat space with Jackiw and 't Hooft and many other contributions to the quantum theory of gravity. In the 1980s he was instrumental in securing National Science Foundation approval of the LIGO gravitational wave experiment against much opposition. He was awarded the Einstein Medal in 2015 for important contributions to general relativity, in particular the development of the ADM formalism. Other awards include: The Dannie Heineman Prize 1994; Fellow of the National Academy of Sciences 1994; Honorary Member of the Torino Academy of Sciences 2001; Member of the American Academy of Arts and Sciences 1979, Fellow of the American Institute of Physics.",
+      "authors": [
+        "M. J. Duff",
+        "K. S. Stelle"
+      ],
+      "published": "2026-11-08T11:58:15Z",
+      "updated": "2026-11-08T11:58:15Z",
+      "categories": [
+        "hep-th",
+        "gr-qc",
+        "physics.hist-ph"
+      ],
+      "url": "https://arxiv.org/abs/2611.11323v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.11323v1",
+      "topics": [
+        "Gravitational waves"
+      ],
+      "title_topics": [],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 1,
+      "kind": "New paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2611.10741",
+      "version": 1,
+      "title": "Configurational Information and Hadron Spectroscopy in Holographic QCD",
+      "abstract": "Based on the concepts of entropy and complexity, Configurational Information Measures (CIMs) are tools capable of extracting information regarding physical systems from their spatially localized energy density, determining properties such as stability limits and phase transitions. In this thesis, CIMs are employed to investigate hadron spectroscopy. By utilizing phenomenological AdS/QCD models in conjunction with CIMs, cataloged meson and baryon resonances are interpolated into structures analogous to Regge trajectories, from which analytical expressions are derived to estimate the masses of higher-order excited states. These estimates are compared with experimental data to search for possible correspondences that may elucidate the properties of particles that have been experimentally detected but remain unidentified. Using this CIM-based AdS/QCD hybrid method, this work analyzes light mesons within a dynamical model, strange vector kaons in a framework that accounts for constituent quark masses, and light-flavor baryons at finite temperature.",
+      "authors": [
+        "P. H. O. Silva"
+      ],
+      "published": "2026-11-07T13:55:03Z",
+      "updated": "2026-11-07T13:55:03Z",
+      "categories": [
+        "hep-th"
+      ],
+      "url": "https://arxiv.org/abs/2611.10741v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.10741v1",
+      "topics": [
+        "Resonance"
+      ],
+      "title_topics": [],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 1,
+      "kind": "New paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2607.03840",
+      "version": 2,
+      "title": "Neutron stars with an agnostic Dark sector: Core and Halo configurations from a two-fluid approach",
+      "abstract": "The study of dark matter admixed neutron stars has the potential to advance our understanding of dark matter particle candidates. However, the large parameter space of dark matter particle masses restricts a systematic, model-independent study. In this analysis, we employ agnostic hadronic and dark-matter equations of state to construct dark-matter-admixed neutron stars within a two-fluid formalism. Dark matter is characterized solely by its low-density equation of state and mass and is modeled as a Fermi gas, while hadronic matter is anchored at low and high densities by chiral effective field theory and perturbative quantum chromodynamics calculations. A speed-of-sound parametrization describes the intermediate- and high-density regimes of both hadronic and dark matter, enabling an agnostic treatment of the dark matter equation of state that is constrained only by thermodynamic consistency and does not favor softer or stiffer behavior. Within this agnostic framework, we find that dark matter does not generically compactify the star: light dark matter forms extended halos that raise the tidal deformability, while heavy dark matter forms compact cores that lower it. Consequently, the dominant observational constraint shifts from gravitational-wave tidal deformability for light, halo-dominated models to NICER mass-radius data for heavy, core-dominated models. Using current data at $1σ$, we constrain the dark matter fraction to $f_{\\mathrm{DM}} \\lesssim 0.11$ for light dark matter. By treating the medium- and high-density dark matter equation of state agnostically within a fermionic framework, our approach yields conservative and broadly applicable bounds on the dark matter content of neutron stars. Neutron stars with similar masses but very different tidal deformabilities could be a smoking-gun signature of dark matter in neutron stars.",
+      "authors": [
+        "Asit karan",
+        "Tuhin Malik",
+        "Asim Kumar Saha",
+        "Constança Providência",
+        "Ritam Mallick"
+      ],
+      "published": "2026-07-04T12:03:18Z",
+      "updated": "2026-11-07T08:03:16Z",
+      "categories": [
+        "astro-ph.HE",
+        "hep-ph"
+      ],
+      "url": "https://arxiv.org/abs/2607.03840v2",
+      "pdf_url": "https://arxiv.org/pdf/2607.03840v2",
+      "topics": [
+        "Gravitational waves"
+      ],
+      "title_topics": [],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 1,
+      "kind": "Updated paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2611.10320",
+      "version": 1,
+      "title": "Relativistic Simulations of Self-Gravitating Radiation Fluids",
+      "abstract": "We present an approach for numerical simulations of pure radiation fluids within the general relativistic hydrodynamics framework. The approach models radiation as a self-gravitating perfect fluid with vanishing rest mass, enabling simulations of radiation fluids in strong-gravity spacetimes. Building on the existing relativistic hydrodynamics code Whisky, within the Einstein Toolkit framework, we introduce modifications to incorporate radiation fluids, including updates to the source terms, recovery scheme, and Riemann solvers. Modifications are validated using standard shock tube tests. We present results for radiation accretion onto a single black hole, as well as a photon star solution for radiation in unstable hydrostatic equilibrium, demonstrating both collapse and dispersion under perturbations.",
+      "authors": [
+        "Bing-Jyun Tsao",
+        "Pablo Laguna",
+        "Octavio Guerrero"
+      ],
+      "published": "2026-11-06T23:44:25Z",
+      "updated": "2026-11-06T23:44:25Z",
+      "categories": [
+        "gr-qc",
+        "astro-ph.HE",
+        "astro-ph.IM"
+      ],
+      "url": "https://arxiv.org/abs/2611.10320v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.10320v1",
+      "topics": [
+        "GRHD"
+      ],
+      "title_topics": [],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 1,
+      "kind": "New paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2611.10287",
+      "version": 1,
+      "title": "Quantum Open Effective Field Theory: anomalous decoherence",
+      "abstract": "We study decoherence of a scalar field coupled to ``anomalous'' environments with critical behavior with the Schwinger-Keldysh including the influence functional, and the quantum master equation (QME) up to second order in the coupling. The Schwinger-Keldysh formulation yields a Langevin equation and the Lindblad (QME) includes \\emph{time dependent rates} allowing to study transient dynamics. We focus on three examples featuring non-Markov dynamics that cannot be described with S-matrix/Fermi's golden rule rates \\textbf{i) Unparticle physics:} a conformal sector beyond the Standard Model at an infrared fixed point featuring correlation functions with anomalous scaling dimensions, \\textbf{ii) Threshold and infrared enhancement:} when the mass shell of the field coincides with or is near to a kinematic threshold of the spectral density of the bath, \\textbf{iii) Critical environments:} the bath is at a critical point, correlation functions scale with anomalous dimensions and long-wavelength fluctuations feature critical slowing down. In all cases the reduced density matrix undergoes decoherence in the energy basis of the probe, and off-diagonal matrix elements decay as $e^{-Φ(t)}$ with $Φ(t)>0 $ the \\emph{decoherence function} and $Γ(t) = \\dotΦ(t)$ the decoherence rate. In all cases we find that either transient or asymptotically $Φ(t) \\propto t^{-μ}~;~ μ>0$ with $μ$, determined by the behavior of the spectral density at threshold and the anomalous scaling dimensions of the correlation functions, or $Φ(t) \\propto \\ln(t)$ for the infrared case. For a critical environment there is a new dynamical scaling exponent. A probe of frequency $ω_q$ is resonant with a \\emph{critically slow} quasiparticle for $q_*\\propto ω^{1/z}_q$ at which decoherence is strongly \\emph{enhanced}.",
+      "authors": [
+        "Gabriela Barenboim",
+        "Daniel Boyanovsky"
+      ],
+      "published": "2026-11-06T22:36:03Z",
+      "updated": "2026-11-06T22:36:03Z",
+      "categories": [
+        "hep-ph",
+        "hep-th"
+      ],
+      "url": "https://arxiv.org/abs/2611.10287v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.10287v1",
+      "topics": [
+        "Resonance"
+      ],
+      "title_topics": [],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 1,
+      "kind": "New paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2611.10228",
+      "version": 1,
+      "title": "FAIR Universe Weak Lensing ML Uncertainty Challenge: Dataset and Cosmological Inference Competition",
+      "abstract": "Weak gravitational lensing is a powerful cosmological probe that enables direct mapping of the matter distribution and precise constraints on the fundamental parameters governing structure formation in the universe. In recent years, machine learning has shown strong potential for extracting cosmological information from weak-lensing data beyond traditional summary statistics. However, progress has been limited by the lack of standardized benchmarks that capture the complexity of the dataset, simulator imperfections, and various systematic biases encountered in realistic analyses. To address this gap, we present the FAIR Universe Weak Lensing Machine Learning Uncertainty Challenge, one of the NeurIPS 2025 competitions, as a benchmark dataset and evaluation study. Our dataset reflects realistic weak-lensing observations, incorporating multiple systematic biases, and thereby providing a controlled testbed for robust cosmological inference under uncertainties. We summarize the main methodological advances developed by the winners of our challenge, including data augmentation with conditional optimal transport, an AI-agent-driven approach for parameter inference, ensemble learning, Vision Transformer-based architectures, and physics-informed feature integration. By unifying the benchmark dataset and the winning solutions, this work provides a community resource for developing and evaluating machine learning methods for weak lensing cosmology and, more broadly, for scientific inference under systematic uncertainties.",
+      "authors": [
+        "Biwei Dai",
+        "Po-Wen Chang",
+        "Erwan Allys",
+        "Wahid Bhimji",
+        "Boris Bolliet",
+        "Thomas Borrett",
+        "Paolo Calafiura",
+        "Ragansu Chakkappai",
+        "Yuan-Tang Chou",
+        "Noé Dia",
+        "Sascha Diefenbacher",
+        "Ibrahim Elsharkawy",
+        "Steven Farrell",
+        "Sacha Guerrini",
+        "Isabelle Guyon",
+        "Chris Harris",
+        "Shih-Chieh Hsu",
+        "Wassim Kablan",
+        "François Lanusse",
+        "Celia Lecat",
+        "Julia Linhart",
+        "Yuezhou Ma",
+        "Benjamin Nachman",
+        "Shubhojit Naskar",
+        "Andy Nilipour",
+        "Laurence Perreault-Levasseur",
+        "Sébastien Pierre",
+        "Benjamin Remy",
+        "David Rousseau",
+        "Uroš Seljak",
+        "Haonan Shangguan",
+        "Sammy Nasser Sharief",
+        "Yuanxu Sun",
+        "Andreas Tersenov",
+        "Ihsan Ullah",
+        "Huikun Weng",
+        "Licong Xu",
+        "Justine Zeghal",
+        "Yulei Zhang",
+        "Hang Zhou"
+      ],
+      "published": "2026-11-06T21:16:37Z",
+      "updated": "2026-11-06T21:16:37Z",
+      "categories": [
+        "astro-ph.CO",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG",
+        "physics.data-an"
+      ],
+      "url": "https://arxiv.org/abs/2611.10228v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.10228v1",
+      "topics": [
+        "Gravitational lensing"
+      ],
+      "title_topics": [],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 1,
+      "kind": "New paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2605.15265",
+      "version": 3,
+      "title": "Eccentric Stellar-mass Binary Black Holes: Population, Detectability, and Waveform Analysis in the LISA and LIGO Era",
+      "abstract": "Eccentric binary black holes (BBHs) formed through dynamical interactions can significantly contribute to gravitational wave (GW) detections. In this work, we present a simulated catalog of dynamically-formed, stellar-mass BBHs in the local universe, incorporating contributions from the Galactic field (flyby interactions), Galactic nucleus (eccentric Kozai-Lidov evolution), and globular clusters (N-body interactions). Our results predict a wide, highly eccentric BBH population in the Milky Way (MW), with source counts of $\\sim 25, 9, 3, 1, <1$ for a 4-year LISA mission and $\\sim 36, 13, 5, 2, 1$ for a 10-year mission, at $\\mathrm{SNR} > 1, 3, 8, 20, 50$, respectively. Extending this model to cosmological populations, we show that different dynamical channels can produce distinct eccentricity distributions in the LVK band and can contribute hundreds of additional low-SNR mHz sources. Specifically, our model yields a merger rate of $Γ\\sim 9 \\mathrm{Gpc}^{-3}\\mathrm{yr}^{-1}$ and $\\sim 150$ extragalactic mHz BBHs with $\\mathrm{SNR} > 1$. However, due to the lower mass and weaker GW signals of stellar-mass BBHs, this number declines sharply at higher detection thresholds (e.g., $\\sim 1$ for $\\mathrm{SNR} > 8$). We further highlight the impact of eccentric BBH signals on the LISA global fit, showing that their individual harmonics can be independently detected in the Milky Way, and may mimic circular binaries with systematically biased chirp masses. Lastly, we show that post-Newtonian waveforms converge reliably for eccentric BBHs with masses of $\\lesssim 10^3 M_\\odot$ in the mHz band. Overall, eccentric BBHs represent a prevalent and promising target for future space-based GW observatories. The simulated catalog and the LISA Eccentricity Astrophysics Package (LEAP) developed in this work are publicly available at https://github.com/zeyuanxuan/lisa-leap/.",
+      "authors": [
+        "Zeyuan Xuan",
+        "Smadar Naoz",
+        "Kyle Kremer",
+        "Michael L. Katz",
+        "Bence Kocsis",
+        "Erez Michaely"
+      ],
+      "published": "2026-05-14T18:00:00Z",
+      "updated": "2026-11-06T21:02:56Z",
+      "categories": [
+        "astro-ph.HE",
+        "gr-qc"
+      ],
+      "url": "https://arxiv.org/abs/2605.15265v3",
+      "pdf_url": "https://arxiv.org/pdf/2605.15265v3",
+      "topics": [
+        "Gravitational waves"
+      ],
+      "title_topics": [],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 1,
+      "kind": "Updated paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2607.24632",
+      "version": 2,
+      "title": "Krylov complexity and spectral density of BMN matrix model",
+      "abstract": "We use Krylov complexity as a typical diagnostic of quantum many body dynamics in the context of BMN matrix model at large mass gap. We calculate several physical entities, for example, the moments and return amplitudes at large mass deformation. We calculate them for both spread complexity of states as well as Krylov growth of operators in the matrix model. We propose a general expression for the moments at any given order $n$. We also discuss orthogonal polynomials for spread as well as operator Krylov complexity. In the context of the Krylov operator growth we further compute the spectral function and the density of states. A careful analysis of the spectral function near the resonance reveals various IR divergences in addition to the physical collective modes. These collective modes appear to be exceptionally stable due to large mass gap. On the other hand, the UV of the theory appears to be extremely damped due to higher scattering rates. We carefully diagnose these IR divergences near resonance which reveals that these collective modes are in fact non-propagating and should be thought of as diffusion modes or relaxation modes with infinite relaxation time. We also calculate the Krylov variance and Krylov entropy for the matrix model and in particular at early time. The linear early time growth of the Krylov entropy confirms the onset of quantum chaos in the matrix model at large mass gap.",
+      "authors": [
+        "Dibakar Roychowdhury"
+      ],
+      "published": "2026-07-27T16:28:49Z",
+      "updated": "2026-11-06T19:29:22Z",
+      "categories": [
+        "hep-th",
+        "cond-mat.str-el",
+        "quant-ph"
+      ],
+      "url": "https://arxiv.org/abs/2607.24632v2",
+      "pdf_url": "https://arxiv.org/pdf/2607.24632v2",
+      "topics": [
+        "Resonance"
+      ],
+      "title_topics": [],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 1,
+      "kind": "Updated paper",
+      "match_reason": "Topic match"
+    },
+    {
       "id": "2604.24798",
       "version": 5,
       "title": "Renormalization-group improved Schwarzschild black hole: shadow, ringdown, and strong cosmic censorship",
@@ -3045,6 +4081,134 @@
       },
       "score": 1,
       "kind": "Updated paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2611.10102",
+      "version": 1,
+      "title": "What observations are needed to advance our theoretical understanding of galaxy formation at high redshift?",
+      "abstract": "Although significant progress has been made over recent decades, a comprehensive and predictive framework for galaxy formation remains elusive. Starting from cosmological initial conditions, current models cannot a priori accurately predict key galaxy properties such as their structure, size, star formation histories, chemical abundance patterns, or supermassive black hole mass. This challenge stems from the vast range of spatial scales involved, as numerical simulations must simultaneously account for sub-AU processes nearby stars and black holes in addition to Mpc-scale cosmological gas inflows/outflows and environmental effects. Consequently, simulations must rely on subgrid models and approximations. As a result, theoretical progress in galaxy formation remains fundamentally driven by observational data and the iterative testing of model predictions against empirical results. Here we highlight five key open problems in theoretical galaxy formation that require dedicated observations of the high-redshift Universe, beyond what can currently be achieved through GO programs.",
+      "authors": [
+        "H. Katz",
+        "R. S. Somerville",
+        "R. Schneider",
+        "B. E. Robertson",
+        "F. Pacucci",
+        "Abdurro'uf",
+        "K. Aditya",
+        "J. M. Afonso",
+        "M. Aravena",
+        "G. Barro",
+        "A. Basu",
+        "R. Begley",
+        "S. Bhattacharya",
+        "S. Bose",
+        "M. Bradač",
+        "G. L. Bryan",
+        "C. Cain",
+        "A. J. Cameron",
+        "S. Carniani",
+        "C. M. Cheng",
+        "N. Choustikov",
+        "E. Curtis-Lake",
+        "A. D'Angelo",
+        "R. Davé",
+        "R. L. Davies",
+        "F. van Donkelaar",
+        "C. T. Donnan",
+        "N. E. Drakos",
+        "Q. Duan",
+        "Y. Dubois",
+        "A. L. Faisst",
+        "M. Farcy",
+        "S. L. Finkelstein",
+        "A. Fontana",
+        "S. Gillman",
+        "S. C. O. Glover",
+        "L. Graziani",
+        "A. R. Gupta",
+        "T. A. Gutcke",
+        "M. G. Haehnelt",
+        "N. P. Hathi",
+        "K. E. Heintz",
+        "M. Hirschmann",
+        "M. Huertas-Company",
+        "A. Hutter",
+        "L. R. Ivey",
+        "K. Iyer",
+        "J. Jeon",
+        "T. B. Jeong",
+        "C. K. Jespersen",
+        "B. L. Jones",
+        "I. Juodžbalis",
+        "T. Kimm",
+        "A. M. Koekemoer",
+        "D. Langeroodi",
+        "A. Lapi",
+        "M. A. Latif",
+        "Y. Liu",
+        "C. C. Lovell",
+        "T. -Y. Lu",
+        "F. Mannucci",
+        "S. H. Menon",
+        "A. Mesinger",
+        "K. Nagamine",
+        "Y. Nakazato",
+        "P. Natarajan",
+        "O. Nebrin",
+        "R. Pascalau",
+        "B. Pérez-Díaz",
+        "P. G. Pérez-González",
+        "E. Pizzati",
+        "A. Polzin",
+        "E. Regos",
+        "M. Reina-Campos",
+        "M. P. Rey",
+        "P. Rinaldi",
+        "D. Roberts",
+        "F. Rodríguez Montero",
+        "W. Roper",
+        "E. Rusta",
+        "M. Saggini",
+        "R. L. Sanders",
+        "F. Shankar",
+        "A. E. Shapley",
+        "X. Shen",
+        "T. M. Stanton",
+        "S. D. Stevenson",
+        "G. Sun",
+        "J. C. Turner",
+        "A. Venditti",
+        "A. P. Vijayan",
+        "T. Wang",
+        "S. Wilkins",
+        "J. H. Wise",
+        "J. Witstok",
+        "Z. Wu",
+        "L. Y. A. Yung",
+        "T. Zana",
+        "S. Zhang",
+        "R. J. Zhao",
+        "M. -Y. Zhuang"
+      ],
+      "published": "2026-11-06T17:40:26Z",
+      "updated": "2026-11-06T17:40:26Z",
+      "categories": [
+        "astro-ph.IM",
+        "astro-ph.GA"
+      ],
+      "url": "https://arxiv.org/abs/2611.10102v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.10102v1",
+      "topics": [
+        "Environmental effects"
+      ],
+      "title_topics": [],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 1,
+      "kind": "New paper",
       "match_reason": "Topic match"
     },
     {
@@ -3429,7 +4593,8 @@
       "published": "2026-11-06T09:35:04Z",
       "updated": "2026-11-06T09:35:04Z",
       "categories": [
-        "astro-ph.HE"
+        "astro-ph.HE",
+        "gr-qc"
       ],
       "url": "https://arxiv.org/abs/2611.09216v1",
       "pdf_url": "https://arxiv.org/pdf/2611.09216v1",
@@ -5839,6 +7004,35 @@
       "match_reason": "Topic match"
     },
     {
+      "id": "2405.09687",
+      "version": 3,
+      "title": "Scattering and bound observables for spinning particles in Kerr spacetime with generic spin orientations",
+      "abstract": "We derive the radial action of a spinning probe particle in Kerr spacetime from the worldline formalism in the first-order form, focusing on linear in spin effects. We then develop a novel covariant Dirac bracket formalism to compute the impulse and the spin kick directly from the radial action, generalizing some conjectural results in the literature and providing ready-to-use expressions for amplitude calculations with generic spin orientations. This allows, for the first time, to find new covariant expressions for scattering observables in the probe limit up to $\\mathcal{O}(G^6 s_1 s_2^4)$. Finally, we use the action-angle representation to compute the fundamental frequencies for generic bound orbits, including the intrinsic spin precession, the periastron advance and the precession of the orbital plane.",
+      "authors": [
+        "Riccardo Gonzo",
+        "Canxin Shi"
+      ],
+      "published": "2024-05-15T20:02:39Z",
+      "updated": "2026-11-09T12:31:44Z",
+      "categories": [
+        "hep-th",
+        "gr-qc"
+      ],
+      "url": "https://arxiv.org/abs/2405.09687v3",
+      "pdf_url": "https://arxiv.org/pdf/2405.09687v3",
+      "topics": [],
+      "title_topics": [],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": [
+          "Riccardo Gonzo"
+        ]
+      },
+      "score": 0,
+      "kind": "Updated paper",
+      "match_reason": "Flagged author; no topic keyword matched"
+    },
+    {
       "id": "2605.08569",
       "version": 2,
       "title": "Relativistic mode sums for neutron-star tidal response",
@@ -5875,7 +7069,7 @@
   "ai_reviews": {
     "status": "Reviews attached",
     "requested": 10,
-    "completed": 10,
-    "quality_assessed": 9
+    "completed": 8,
+    "quality_assessed": 7
   }
 }
