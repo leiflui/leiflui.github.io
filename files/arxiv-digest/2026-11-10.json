@@ -258,7 +258,7 @@
         "source_url": "https://arxiv.org/html/2611.06018v1",
         "fingerprint": "930045f67370af4fa3af151d24253f2a8c423515056b07e2644edcb8d8293a80",
         "generated_at": "2026-11-10T00:13:35.014462+00:00",
-        "relevance_rank": 6,
+        "relevance_rank": 7,
         "quality_rank": 4
       }
     },
@@ -347,7 +347,25 @@
       },
       "score": 3,
       "kind": "New paper",
-      "match_reason": "Topic match"
+      "match_reason": "Topic match",
+      "ai_review": {
+        "summary": "This paper surveys perturbation spectra on a static generalized Schwarzschild–de Sitter geometry arising in f(R) gravity. The metric adds linear and logarithmic terms to the familiar background. The authors calculate scalar, electromagnetic and modeled axial gravitational frequencies using Padé-averaged WKB approximations and an analytical barrier approximation, then illustrate time evolution with finite-difference wave propagation. Selected parameter choices produce frequencies close to Schwarzschild, while varying the geometric parameters changes oscillation and damping rates nonlinearly. The sampled fundamental modes are damped. The contribution is a phenomenological map of spectral changes across this metric family. The calculation leaves the coupled polar and scalaron sectors open, so the displayed decay does not by itself establish stability of the complete modified-gravity perturbation system.",
+        "relevance_score": 4,
+        "relevance_reason": "A direct quasinormal-mode and black-hole-perturbation topic match, with a specialized focus on a static modified-gravity metric.",
+        "quality_score": 3,
+        "quality_reason": "The inspected text compares two approximate frequency methods, reports WKB order diagnostics and presents time evolutions. Support is strongest for the sampled barrier modes, while low-multipole accuracy and the full coupled gravitational system require further checks.",
+        "limitations": "Selective reading: abstract, Introduction excerpts, WKB error discussion in Sec. IV.1, Sec. V and Sec. VI. Numerical tables and field-equation derivations were not fully checked. Results emphasize fundamental modes and omit coupled polar/scalaron dynamics. Exterior boundary conditions and full stability need independent verification. Figures were not visually inspected; derivations were not independently verified.",
+        "confidence": "low",
+        "evidence_location": "Sec. IV.1, WKB frequency tables",
+        "evidence_quote": "the overtone number fixed at n=0",
+        "model": "ChatGPT/Codex (model not reported)",
+        "source": "HTML paper text",
+        "source_url": "https://arxiv.org/html/2611.11895v1",
+        "fingerprint": "d5eb7836637910962931415b779b39c785a6e570cccbbe6be1bf8dc25baa55eb",
+        "generated_at": "2026-11-11T02:07:22.539292+00:00",
+        "relevance_rank": 8,
+        "quality_rank": 5
+      }
     },
     {
       "id": "2609.23428",
@@ -379,7 +397,25 @@
       },
       "score": 3,
       "kind": "Updated paper",
-      "match_reason": "Topic match"
+      "match_reason": "Topic match",
+      "ai_review": {
+        "summary": "This paper studies how dark-matter subhalos perturb arrival-time differences between strongly lensed gravitational-wave images. It simulates two galaxy-scale lens configurations with 200 realizations each, comparing point-mass subhalos with a more extended NFW population in the million-to-billion-solar-mass range. Replacing part of the smooth halo with substructure produces delay shifts of hours, sometimes approaching a day in the NFW cusp example. No additional milli-images appear in the sampled standard-NFW populations, with image-finding checks using Lenstronomy. The contribution is a quantitative warning that realistic substructure can affect gravitational-wave lens time-delay modeling even without creating extra images. The results remain conditional on two lenses and specified populations, and the comparison changes both internal density profiles and spatial distributions.",
+        "relevance_score": 5,
+        "relevance_reason": "Directly combines gravitational lensing, gravitational waves and dark-matter substructure, including timing observables relevant to lens searches.",
+        "quality_score": 3,
+        "quality_reason": "The inspected text specifies a Monte Carlo population model, conserves the smooth/subhalo mass allocation and cross-checks image finding. However, density-profile and spatial-distribution effects are confounded, and two configurations do not establish a general milli-image probability.",
+        "limitations": "Selective reading: abstract, Introduction, portions of Secs. II and IV.2, and Secs. V–VI. Only two macro-lenses and 200 realizations per lens are studied. A simplified additional-potential delay estimate is used, and the inspected text does not establish a full macro-model refit or detector-level inference. Figures were not visually inspected; simulations and derivations were not independently verified.",
+        "confidence": "low",
+        "evidence_location": "Sec. VI, Conclusions",
+        "evidence_quote": "Additional examination of these models will be required to isolate the effects of the density profile and spatial distribution.",
+        "model": "ChatGPT/Codex (model not reported)",
+        "source": "HTML paper text",
+        "source_url": "https://arxiv.org/html/2609.23428v2",
+        "fingerprint": "851e8bc1a4be81ca8861d5a9eb4f98eccde4f9efaed40695c9f043d8eab385bf",
+        "generated_at": "2026-11-11T02:07:22.541320+00:00",
+        "relevance_rank": 5,
+        "quality_rank": 6
+      }
     },
     {
       "id": "2607.08884",
@@ -428,8 +464,8 @@
         "source_url": "https://arxiv.org/html/2607.08884v2",
         "fingerprint": "31dbede1b9aaea6a42b28e73e81d88f9c1b5cda671f98875aafda2e3279428a3",
         "generated_at": "2026-11-10T00:13:35.016193+00:00",
-        "relevance_rank": 7,
-        "quality_rank": 5
+        "relevance_rank": 9,
+        "quality_rank": 7
       }
     },
     {
@@ -478,8 +514,8 @@
         "source_url": "https://arxiv.org/html/2609.28953v2",
         "fingerprint": "86c5d5af61605cf6b4d83144bf60949de00bae9742e08cf6b15dfafc97f3c1c4",
         "generated_at": "2026-11-10T00:13:35.016771+00:00",
-        "relevance_rank": 5,
-        "quality_rank": 6
+        "relevance_rank": 6,
+        "quality_rank": 8
       }
     },
     {
@@ -529,8 +565,8 @@
         "source_url": "https://arxiv.org/html/2611.08952v1",
         "fingerprint": "872fc78de5558a0ffa2e6b0cc92ae2f58bfc32fec3f2c6cbdfa8d2fb820c2d52",
         "generated_at": "2026-11-10T00:13:35.017449+00:00",
-        "relevance_rank": 8,
-        "quality_rank": 7
+        "relevance_rank": 10,
+        "quality_rank": 9
       }
     },
     {
@@ -7069,7 +7105,7 @@
   "ai_reviews": {
     "status": "Reviews attached",
     "requested": 10,
-    "completed": 8,
-    "quality_assessed": 7
+    "completed": 10,
+    "quality_assessed": 9
   }
 }
