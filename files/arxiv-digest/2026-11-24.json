@@ -2,7 +2,7 @@
   "title": "Leif's Weekly arXiv digest",
   "timezone": "Asia/Hong_Kong",
   "issue": "2026-11-24",
-  "generated_at": "2026-11-24T14:10:05.603467+08:00",
+  "generated_at": "2026-11-24T18:02:10.806122+08:00",
   "window_start": "2026-11-17T00:00:00+08:00",
   "window_end": "2026-11-24T00:00:00+08:00",
   "demo": false,
@@ -24,9 +24,9 @@
   "max_papers": 20,
   "excluded": 0,
   "coverage": {
-    "requests": 6,
-    "records_scanned": 1200,
-    "papers_in_window": 1162,
+    "requests": 7,
+    "records_scanned": 1400,
+    "papers_in_window": 1172,
     "categories": [
       "gr-qc",
       "astro-ph.HE",
@@ -615,6 +615,68 @@
       },
       "score": 2,
       "kind": "New paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2411.10804",
+      "version": 3,
+      "title": "Gravitational lensing and deflection angles of generalised Ellis-Bronnikov wormhole embedded in a warped braneworld background",
+      "abstract": "We investigate null geodesics, deflection angles, and gravitational lensing by the generalized Ellis-Bronnikov (GEB) wormhole and its embedding in a five-dimensional warped braneworld (WGEB). The GEB geometry extends the standard Ellis-Bronnikov wormhole through a steepness parameter $m\\geq 2$, which controls the throat profile while partially reducing the violation of the classical energy conditions. We derive analytic expressions for the weak- and strong-deflection angles and obtain the corresponding Einstein-ring and relativistic-image relations. The standard Ellis-Bronnikov results are recovered as the special case $m=2$, while for $m>2$ the strong-deflection angle exhibits a power-law divergence instead of the familiar logarithmic behaviour. For the warped five-dimensional geometry, we show that the extra-dimensional momentum modifies the effective impact parameter, and hence the deflection angle and image positions while leaving the location of the unstable photon orbit unchanged. We further derive generalized relations between relativistic and non-relativistic Einstein-ring radii. Our analysis shows that deflection/ring data alone cannot distinguish the effect of the warped extra dimension in WGEB scenario.",
+      "authors": [
+        "Soumya Jana",
+        "Vivek Sharma",
+        "Suman Ghosh"
+      ],
+      "published": "2024-11-16T13:46:52Z",
+      "updated": "2026-11-23T13:54:52Z",
+      "categories": [
+        "gr-qc"
+      ],
+      "url": "https://arxiv.org/abs/2411.10804v3",
+      "pdf_url": "https://arxiv.org/pdf/2411.10804v3",
+      "topics": [
+        "Gravitational lensing"
+      ],
+      "title_topics": [
+        "Gravitational lensing"
+      ],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 2,
+      "kind": "Updated paper",
+      "match_reason": "Topic match"
+    },
+    {
+      "id": "2603.03033",
+      "version": 2,
+      "title": "Carrollian correlators in black hole perturbation theory",
+      "abstract": "In this note, we clarify the relationship between the two-point Carrollian correlator and massless scattering in a black hole background. It turns out that there are two types of Carrollian correlators at the null boundaries of each asymptotically flat spacetime. The correlator from $\\mathscr I^-$ to $\\mathscr I^+$ should be regularized by subtracting the flat-space analog, and it is the position space version of the reflection amplitude for massless scattering. On the other hand, the correlator from $\\mathscr I^-$ to the future horizon $\\mathcal H^+$ is absent in flat space, and it is the position space version of the transmission amplitude. The poles of the Carrollian correlators are governed by null geodesics from $\\mathscr I^-$ to either $\\mathscr I^+$ or $\\mathcal H^+$, and these geodesics define two classes of classical equations in Carrollian space. These equations relate the Shapiro time delay to the deflection angle and are determined purely by the boundary data. We find that, for small deflection angles, the time delay for the correlator from $\\mathscr I^-$ to $\\mathscr I^+/\\mathcal H^+$ exhibits logarithmic/quadratic behavior. On the other hand, when the deflection angle is large, the time delay always increases linearly for both correlators. We further establish a relation between the low-frequency bulk scattering coefficients and the leading non-contact contributions at late times. The correlator from $\\mathscr I^-$ to $\\mathscr I^+$ features an inverse-square tail $τ^{-2}$ with an explicit angular distribution $K_2$. We have numerically confirmed this angle-dependent late-time tail.",
+      "authors": [
+        "Jiang Long",
+        "Zhan-Jia Qu",
+        "Hong-Yang Xiao"
+      ],
+      "published": "2026-03-03T14:26:25Z",
+      "updated": "2026-11-23T12:54:57Z",
+      "categories": [
+        "gr-qc"
+      ],
+      "url": "https://arxiv.org/abs/2603.03033v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.03033v2",
+      "topics": [
+        "Black-hole perturbation theory"
+      ],
+      "title_topics": [
+        "Black-hole perturbation theory"
+      ],
+      "author_flags": {
+        "collaborators": [],
+        "notable_authors": []
+      },
+      "score": 2,
+      "kind": "Updated paper",
       "match_reason": "Topic match"
     },
     {
@@ -6929,6 +6991,54 @@
       "score": 1,
       "kind": "New paper",
       "match_reason": "Topic match"
+    },
+    {
+      "id": "2603.28699",
+      "version": 3,
+      "title": "An intertwined short and long $γ$-ray burst with a 4-minute separation",
+      "abstract": "Gamma-ray bursts (GRBs), among the most energetic transients in the Universe, are traditionally classified into long-duration (lasting more than 2 seconds) and short-duration (lasting less than 2 seconds) events. Long-duration GRBs are typically associated with the core collapse of massive stars (type II), whereas short-duration GRBs originate from the merger of compact binary systems (type I). These different progenitor channels are reflected in distinct observational signatures that provide key diagnostics for GRB classification. Here we report a peculiar event, GRB 160425A, comprising two sub-bursts separated by 4 minutes: a short-duration burst ($G_1$) and a long-duration burst ($G_2$). Nearly all standard prompt-emission diagnostics, including pulse morphology, duration, hardness ratio, minimum variability timescale, spectral properties and established empirical correlations, consistently categorize $G_1$ as a short-like GRB (type I, merger origin) and $G_2$ as a long-like (type II, collapsar origin) GRB. The coexistence of merger and collapsar signatures within a single event challenges existing progenitor frameworks and calls for a re-evaluation of GRB classification schemes and progenitor scenarios.",
+      "authors": [
+        "Liang Li",
+        "Yu Wang",
+        "Bing Zhang",
+        "Ye Li",
+        "Shu-Rui Zhang",
+        "Jochen Greiner",
+        "Zhi-Ping Jin",
+        "Jin-Jun Geng",
+        "Hou-Jun Lv",
+        "Asaf Peer",
+        "Maria Giovanna Dainotti",
+        "Tong Liu",
+        "Yi-Zhong Fan",
+        "Yong-Feng Huang",
+        "Zi-Gao Dai",
+        "Melin Kole",
+        "Wei-Hua Lei",
+        "Ye-Fei Yuan",
+        "Shuang-Nan Zhang",
+        "Felix Ryde",
+        "She-Sheng Xue",
+        "Rong-Gen Cai"
+      ],
+      "published": "2026-03-30T17:16:44Z",
+      "updated": "2026-11-23T14:44:18Z",
+      "categories": [
+        "astro-ph.HE"
+      ],
+      "url": "https://arxiv.org/abs/2603.28699v3",
+      "pdf_url": "https://arxiv.org/pdf/2603.28699v3",
+      "topics": [],
+      "title_topics": [],
+      "author_flags": {
+        "collaborators": [
+          "Bing Zhang"
+        ],
+        "notable_authors": []
+      },
+      "score": 0,
+      "kind": "Updated paper",
+      "match_reason": "Flagged author; no topic keyword matched"
     },
     {
       "id": "2610.27069",
