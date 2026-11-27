@@ -58,7 +58,7 @@ author_profile: true
 
 ## Refereed Journal Articles:
 ### Lead/Co-Lead Authored:
-- **L. Lui**, Z. Zhang, A. Torres-Orjuela. (2026). *A Dark Matter Masquerade: Degeneracies in Black Hole and Accretion Inference from X-ray Reflection Measurements and Prospects for Compact Dark Matter Halo Constraints.* [arXiv:2608.20752](https://arxiv.org/abs/2608.20752) (Accepted in JHEAP).
+- **L. Lui**, Z. Zhang, A. Torres-Orjuela. (2026). *A Dark Matter Masquerade: Degeneracies in Black Hole and Accretion Inference from X-ray Reflection Measurements and Prospects for Compact Dark Matter Halo Constraints.* [J. High Energy Astrophys. 56, 100783 (2026)](https://www.sciencedirect.com/science/article/abs/pii/S221440482600234X) (Accepted in JHEAP).
 - **L. Lui**, L. V. Drummond, A. Torres-Orjuela. (2026). *Pitching Cosmic Curveballs: Environmental Effects on Extreme-Mass-Ratio Inspirals with Spinning Secondaries.* [Phys. Rev. Lett. 137, 121403 (2026)](https://doi.org/10.1103/dy3h-65ty).
 - **L. Lui**, A. Torres-Orjuela, R. Kar Chowdhury, &  L. Dai. (2025). *Gravitational Wave Signatures of Quasi-Periodic Eruptions: LISA Detection Prospects for RX J1301.9+2747.* [Astrophys.J. 1004 221 (2026)](https://iopscience.iop.org/article/10.3847/1538-4357/ae71cc).
 
